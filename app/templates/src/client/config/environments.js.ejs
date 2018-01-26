@@ -1,0 +1,23 @@
+import { merge } from 'lodash'
+
+const development = {
+  api: {
+    baseURL: '<%= apiURL %>'
+  }
+}
+
+const production = {
+  api: {
+    baseURL: ''
+  }
+}
+
+const stage = merge({}, production, {
+
+})
+
+export default {
+  development,
+  production,
+  stage
+}
