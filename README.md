@@ -13,7 +13,7 @@ npm install -g generator-react-client
 Then generate your new project:
 
 ```bash
-yo react-client
+yo react-client <project-name>
 ```
 
 ### Project Documentation
