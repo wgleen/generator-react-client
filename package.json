@@ -7,7 +7,8 @@
     "node": ">=8"
   },
   "files": [
-    "app"
+    "app",
+    "lib"
   ],
   "keywords": [
     "yeoman-generator",
