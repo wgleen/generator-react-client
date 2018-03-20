@@ -106,9 +106,10 @@ module.exports = class extends Generator {
       templatePath = 'src/client/actions'
       destinationPath = `${_appName}/src/client/actions`
 
-      this.fs.copy(
-        this.templatePath(`${templatePath}`),
-        this.destinationPath(`${destinationPath}`)
+      this.fs.copyTpl(
+        this.templatePath(`${templatePath}/todosActions.ejs`),
+        this.destinationPath(`${destinationPath}/todosActions.js`),
+        { serverMiddleware: _serverMiddleware }
       )
 
       //Components files
