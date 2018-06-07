@@ -99,7 +99,10 @@ module.exports = class extends Generator {
         this.fs.copyTpl(
           this.templatePath('serverless.yml.ejs'),
           this.destinationPath(`${destinationPath}/serverless.yml`),
-          { appName: _appName }
+          { 
+            appName: _appName,
+            serverlessRegion
+          }
         )
       }
 
