@@ -40,6 +40,7 @@ module.exports = class extends Generator {
       const appTitle = helpers.toTitle(_appName)
       const _serverMiddleware = answers.serverMiddleware == 'y'
       const serverlessInfrastructure = answers.serverlessInfrastructure == 'y'
+      const serverlessRegion = answers.serverlessRegion
 
       let destinationPath = _appName
       let templatePath = '/'
