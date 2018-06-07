@@ -7,12 +7,13 @@
     "dev": "nodemon src/server/index.js --exec babel-node",
     "clean": "rm -rf dist && mkdir dist",
     "build": "npm run clean && npm run build:client && npm run build:server",
-    "build:client": "webpack --progress -p && mv dist/assets/index.html dist && cp -R public/* dist",
+    "build:client": "webpack --progress -p && mv dist/assets/index.html dist && cp -R public/ dist/",
     "build:server": "babel --ignore src/client -d ./dist ./src -s",
     "start": "pm2 start dist/server -i max",
     "start-docker": "pm2-docker start dist/server -i max"
   },
   "dependencies": {
+    <% if (serverlessInfrastructure) { %>"aws-sdk": "^2.252.1",<% } %>
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -23,6 +24,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
+    <% if (serverlessInfrastructure) { %>"claudia": "^4.0.0",<% } %>
     "css-loader": "^0.28.9",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",

@@ -22,12 +22,18 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'serverMiddleware',
         message: `The backend server is a middleware (y|n)`
+      },
+      {
+        type: 'input',
+        name: 'serverlessInfrastructure',
+        message: `The infrastructure of the aplication is serverless (y|n)`
       }
     ])
     .then(answers => {
       const _appName = answers.appName || this.appName
       const appTitle = helpers.toTitle(_appName)
       const _serverMiddleware = answers.serverMiddleware == 'y'
+      const serverlessInfrastructure = answers.serverlessInfrastructure == 'y'
 
       let destinationPath = _appName
       let templatePath = '/'
@@ -52,7 +58,10 @@ module.exports = class extends Generator {
       this.fs.copyTpl(
         this.templatePath('package.json.ejs'),
         this.destinationPath(`${destinationPath}/package.json`),
-        { appName: _appName }
+        { 
+          appName: _appName,
+          serverlessInfrastructure
+        }
       )
 
       this.fs.copy(
