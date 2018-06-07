@@ -88,6 +88,21 @@ module.exports = class extends Generator {
         this.destinationPath(`${destinationPath}/webpack.config.babel.js`)
       )
 
+      //Serverless Config
+
+      if (serverlessInfrastructure) {
+        this.fs.copy(
+          this.templatePath('lambda.js'),
+          this.destinationPath(`${destinationPath}/lambda.js`)
+        )
+
+        this.fs.copyTpl(
+          this.templatePath('serverless.yml.ejs'),
+          this.destinationPath(`${destinationPath}/serverless.yml`),
+          { appName: _appName }
+        )
+      }
+
       //Public files
       templatePath = 'public'
       destinationPath = `${_appName}/public`

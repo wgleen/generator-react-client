@@ -10,16 +10,16 @@
     "build:client": "webpack --progress -p && mv dist/assets/index.html dist && cp -R public/ dist/",
     "build:server": "babel --ignore src/client -d ./dist ./src -s",
     <% if (serverlessInfrastructure) { %>
-    "lambda:generate": "npm run build && claudia generate-serverless-express-proxy --express-module dist/server/app.production",
-    "lambda:create": "claudia create --handler lambda.handler --deploy-proxy-api --region <%= serverlessRegion %>",
-    "lambda:update": "claudia update"
+    "serverless": "serverless",
     <% } else { %>
     "start": "pm2 start dist/server -i max",
     "start-docker": "pm2-docker start dist/server -i max"
     <% } %>
   },
   "dependencies": {
-    <% if (serverlessInfrastructure) { %>"aws-sdk": "^2.252.1",<% } %>
+    <% if (serverlessInfrastructure) { %>
+    "aws-serverless-express": "^3.2.0",
+    <% } %>
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -30,7 +30,6 @@
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
-    <% if (serverlessInfrastructure) { %>"claudia": "^4.0.0",<% } %>
     "css-loader": "^0.28.9",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -43,7 +42,9 @@
     "material-ui": "^0.20.0",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
+    <% if (!serverlessInfrastructure) { %>
     "pm2-docker": "^2.1.0",
+    <% } %>
     "postcss-custom-properties": "^6.2.0",
     "postcss-custom-selectors": "^4.0.1",
     "postcss-loader": "^2.0.10",
@@ -63,6 +64,9 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
+    <% if (serverlessInfrastructure) { %>
+    "serverless": "^1.27.3",
+    <% } %>
     "style-loader": "^0.19.1",
     "validator": "^9.2.0",
     "webpack": "^3.10.0",
