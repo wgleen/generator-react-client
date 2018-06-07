@@ -16,17 +16,23 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'appName',
-        message: `Enter a name for the application ${this.appName ? `or keep ${this.appName}` : ''}`
+        message: `Enter a name for the application${this.appName ? ` or keep ${this.appName}?` : '?'}`
       },
       {
         type: 'input',
         name: 'serverMiddleware',
-        message: `The backend server is a middleware (y|n)`
+        message: 'The backend server is a middleware? (y|n)'
       },
       {
         type: 'input',
         name: 'serverlessInfrastructure',
-        message: `The infrastructure of the aplication is serverless (y|n)`
+        message: 'The infrastructure of the aplication is serverless? (y|n)'
+      },
+      {
+        when: answers => answers.serverlessInfrastructure,
+        type: 'input',
+        name: 'serverlessRegion',
+        message: "What's the aws region?"
       }
     ])
     .then(answers => {
@@ -60,7 +66,8 @@ module.exports = class extends Generator {
         this.destinationPath(`${destinationPath}/package.json`),
         { 
           appName: _appName,
-          serverlessInfrastructure
+          serverlessInfrastructure,
+          serverlessRegion
         }
       )
 

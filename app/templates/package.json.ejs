@@ -9,8 +9,14 @@
     "build": "npm run clean && npm run build:client && npm run build:server",
     "build:client": "webpack --progress -p && mv dist/assets/index.html dist && cp -R public/ dist/",
     "build:server": "babel --ignore src/client -d ./dist ./src -s",
-    "start": "pm2 start dist/server -i max",
-    "start-docker": "pm2-docker start dist/server -i max"
+    <% if (serverlessInfrastructure) { %>
+      "lambda:generate": "claudia generate-serverless-express-proxy --express-module app.production",
+      "lambda:create": "claudia create --handler lambda.handler --deploy-proxy-api --region <%= serverlessRegion %>",
+      "lambda:update": "claudia update"
+    <% } else { %>
+      "start": "pm2 start dist/server -i max",
+      "start-docker": "pm2-docker start dist/server -i max"
+    <% } %>
   },
   "dependencies": {
     <% if (serverlessInfrastructure) { %>"aws-sdk": "^2.252.1",<% } %>
