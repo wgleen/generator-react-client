@@ -10,7 +10,7 @@
     "build:client": "webpack --progress -p && mv dist/assets/index.html dist && cp -R public/ dist/",
     "build:server": "babel --ignore src/client -d ./dist ./src -s",
     <% if (serverlessInfrastructure) { %>
-    "serverless": "serverless",
+    "serverless": "serverless"
     <% } else { %>
     "start": "pm2 start dist/server -i max",
     "start-docker": "pm2-docker start dist/server -i max"
