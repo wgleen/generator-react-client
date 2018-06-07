@@ -223,9 +223,24 @@ module.exports = class extends Generator {
       destinationPath = `${_appName}/src/server`
 
       this.fs.copyTpl(
-        this.templatePath(`${templatePath}/index.js.ejs`),
-        this.destinationPath(`${destinationPath}/index.js`),
+        this.templatePath(`${templatePath}/app.js.ejs`),
+        this.destinationPath(`${destinationPath}/app.js`),
         { serverMiddleware: _serverMiddleware }
+      )
+
+      this.fs.copy(
+        this.templatePath(`${templatePath}/app.development.js`),
+        this.destinationPath(`${destinationPath}/app.development.js`)
+      )
+
+      this.fs.copy(
+        this.templatePath(`${templatePath}/app.production.js`),
+        this.destinationPath(`${destinationPath}/app.production.js`)
+      )
+
+      this.fs.copy(
+        this.templatePath(`${templatePath}/index.js`),
+        this.destinationPath(`${destinationPath}/index.js`)
       )
 
       //API files

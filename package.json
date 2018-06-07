@@ -23,7 +23,7 @@
   "repository": "wgleen/generator-react-client",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "yeoman-generator": "^2.0.2"
+    "lodash": "^4.17.10",
+    "yeoman-generator": "^2.0.5"
   }
 }
