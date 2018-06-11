@@ -20,3 +20,6 @@ dist
 
 # Mac
 .DS_Store
+
+# Serverless
+.serverless

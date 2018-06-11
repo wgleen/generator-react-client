@@ -238,9 +238,20 @@ module.exports = class extends Generator {
       templatePath = 'src/config'
       destinationPath = `${_appName}/src/config`
 
+      this.fs.copyTpl(
+        this.templatePath(`${templatePath}/environments.js.ejs`),
+        this.destinationPath(`${destinationPath}/environments.js`),
+        { appName: _appName }
+      )
+
       this.fs.copy(
-        this.templatePath(`${templatePath}`),
-        this.destinationPath(`${destinationPath}`)
+        this.templatePath(`${templatePath}/index.js`),
+        this.destinationPath(`${destinationPath}/index.js`)
+      )
+
+      this.fs.copy(
+        this.templatePath(`${templatePath}/webpackEnv.js`),
+        this.destinationPath(`${destinationPath}/webpackEnv.js`)
       )
 
       //Server files

@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "postinstall": "if [ $NPM_CONFIG_PRODUCTION ]; then npm run publish; fi",
+    "postinstall": "if [ $NPM_CONFIG_PRODUCTION ]; then npm run build; fi",
     "dev": "nodemon src/server/index.js --exec babel-node",
-    "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && npm run build:client && npm run build:server",
+    "build": "npm run build:clean && npm run build:client && npm run build:server",
+    "build:destroy": "rm -rf dist",
+    "build:clean": "npm run build:destroy && mkdir dist",
     "build:client": "webpack --progress -p && mv dist/assets/index.html dist && cp -R public/ dist/",
     "build:server": "babel --ignore src/client -d ./dist ./src -s",
     <% if (serverlessInfrastructure) { %>
-    "serverless": "serverless"
+    "serverless": "serverless",
+    "serverless:deploy": "npm run build && serverless deploy && npm run build:destroy"
     <% } else { %>
     "start": "pm2 start dist/server -i max",
     "start-docker": "pm2-docker start dist/server -i max"
@@ -25,7 +27,6 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
@@ -66,6 +67,7 @@
     "sass-loader": "^6.0.6",
     <% if (serverlessInfrastructure) { %>
     "serverless": "^1.27.3",
+    "serverless-s3-sync": "^1.6.1",
     <% } %>
     "style-loader": "^0.19.1",
     "validator": "^9.2.0",

@@ -1,0 +1,11 @@
+export default {
+  development: {
+    cdnUrl: '/assets/'
+  },
+  stage: {
+    cdnUrl: 'https://s3.amazonaws.com/<%= appName %>-statics/assets/'
+  },
+  production: {
+    cdnUrl: 'https://s3.amazonaws.com/<%= appName %>-production-statics/assets/'
+  }
+}
