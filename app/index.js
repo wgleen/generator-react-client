@@ -136,7 +136,7 @@ module.exports = class extends Generator {
       destinationPath = `${_appName}/src/client/actions`
 
       this.fs.copy(
-        this.templatePath(`${templatePath}/todosActions.ejs`),
+        this.templatePath(`${templatePath}/todosActions.js`),
         this.destinationPath(`${destinationPath}/todosActions.js`)
       )
 
