@@ -31,12 +31,13 @@ module.exports = class extends Generator {
       }
     ])
     .then(answers => {
+      const rootPath = this.appName || answers.appName
       const _appName = answers.appName || this.appName
       const appTitle = helpers.toTitle(_appName)
       const serverlessInfrastructure = answers.serverlessInfrastructure == 'y'
       const serverlessRegion = answers.serverlessRegion
 
-      let destinationPath = _appName
+      let destinationPath = rootPath
       let templatePath = '/'
 
       //Root files
@@ -102,7 +103,7 @@ module.exports = class extends Generator {
 
       //Public files
       templatePath = 'public'
-      destinationPath = `${_appName}/public`
+      destinationPath = `${rootPath}/public`
 
       this.fs.copy(
         this.templatePath(`${templatePath}/.gitkeep`),
@@ -112,7 +113,7 @@ module.exports = class extends Generator {
       //Client files
 
       templatePath = 'src/client'
-      destinationPath = `${_appName}/src/client`
+      destinationPath = `${rootPath}/src/client`
 
       this.fs.copyTpl(
         this.templatePath(`${templatePath}/index.html.ejs`),
@@ -133,7 +134,7 @@ module.exports = class extends Generator {
       //Actions files
 
       templatePath = 'src/client/actions'
-      destinationPath = `${_appName}/src/client/actions`
+      destinationPath = `${rootPath}/src/client/actions`
 
       this.fs.copy(
         this.templatePath(`${templatePath}/todosActions.js`),
@@ -143,7 +144,7 @@ module.exports = class extends Generator {
       //Components files
 
       templatePath = 'src/client/components'
-      destinationPath = `${_appName}/src/client/components`
+      destinationPath = `${rootPath}/src/client/components`
 
       this.fs.copy(
         this.templatePath(`${templatePath}`),
@@ -153,7 +154,7 @@ module.exports = class extends Generator {
       //Client config files
 
       templatePath = 'src/client/config'
-      destinationPath = `${_appName}/src/client/config`
+      destinationPath = `${rootPath}/src/client/config`
 
       this.fs.copyTpl(
         this.templatePath(`${templatePath}/environments.js.ejs`),
@@ -169,7 +170,7 @@ module.exports = class extends Generator {
       //Constants files
 
       templatePath = 'src/client/constants'
-      destinationPath = `${_appName}/src/client/constants`
+      destinationPath = `${rootPath}/src/client/constants`
 
       this.fs.copy(
         this.templatePath(`${templatePath}/actionTypes.js`),
@@ -185,7 +186,7 @@ module.exports = class extends Generator {
       //Lib files
 
       templatePath = 'src/client/lib'
-      destinationPath = `${_appName}/src/client/lib`
+      destinationPath = `${rootPath}/src/client/lib`
 
       this.fs.copy(
         this.templatePath(`${templatePath}`),
@@ -195,7 +196,7 @@ module.exports = class extends Generator {
       //Mocks files
 
       templatePath = 'src/client/mocks'
-      destinationPath = `${_appName}/src/client/mocks`
+      destinationPath = `${rootPath}/src/client/mocks`
 
       this.fs.copy(
         this.templatePath(`${templatePath}`),
@@ -205,7 +206,7 @@ module.exports = class extends Generator {
       //Reducers files
 
       templatePath = 'src/client/reducers'
-      destinationPath = `${_appName}/src/client/reducers`
+      destinationPath = `${rootPath}/src/client/reducers`
 
       this.fs.copy(
         this.templatePath(`${templatePath}`),
@@ -215,7 +216,7 @@ module.exports = class extends Generator {
       //Styles files
 
       templatePath = 'src/client/styles'
-      destinationPath = `${_appName}/src/client/styles`
+      destinationPath = `${rootPath}/src/client/styles`
 
       this.fs.copy(
         this.templatePath(`${templatePath}`),
@@ -225,7 +226,7 @@ module.exports = class extends Generator {
       //Config files
 
       templatePath = 'src/config'
-      destinationPath = `${_appName}/src/config`
+      destinationPath = `${rootPath}/src/config`
 
       this.fs.copyTpl(
         this.templatePath(`${templatePath}/environments.js.ejs`),
@@ -246,7 +247,7 @@ module.exports = class extends Generator {
       //Server files
 
       templatePath = 'src/server'
-      destinationPath = `${_appName}/src/server`
+      destinationPath = `${rootPath}/src/server`
 
       this.fs.copy(
         this.templatePath(`${templatePath}/app.js`),
@@ -266,7 +267,7 @@ module.exports = class extends Generator {
       //Server config files
 
       templatePath = 'src/server/config'
-      destinationPath = `${_appName}/src/server/config`
+      destinationPath = `${rootPath}/src/server/config`
 
       this.fs.copy(
         this.templatePath(`${templatePath}/environments.js`),
@@ -281,7 +282,7 @@ module.exports = class extends Generator {
       //Server lib files
 
       templatePath = 'src/server/lib'
-      destinationPath = `${_appName}/src/server/lib`
+      destinationPath = `${rootPath}/src/server/lib`
 
       this.fs.copy(
         this.templatePath(`${templatePath}/api.js`),

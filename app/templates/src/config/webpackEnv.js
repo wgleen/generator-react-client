@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import config from './index'
 
 export const development = {
@@ -83,16 +84,14 @@ export const production = {
       }
     ]
   },
+  optimization: {
+    minimizer: [ new UglifyJsPlugin() ]
+  },
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: JSON.stringify('production'),
       ENV: config.env,
       DEBUG: false
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        screw_ie8: true
-      }
     }),
     new HtmlWebpackPlugin({
       template:  `${config.paths.client}/index.html`,

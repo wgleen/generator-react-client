@@ -7,6 +7,7 @@ const config = envConfig[env]
 
 export default merge(config, {
   env,
+  nodeEnv: process.env.NODE_ENV || 'development',
   paths: {
     client: `${root}src/client`,
     server: `${root}src/server`,

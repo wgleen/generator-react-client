@@ -5,7 +5,7 @@ import config from './config'
 import morgan from 'morgan'
 const app = express()
 
-app.use(morgan('combined'))
+app.use(morgan('tiny'))
 app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -14,7 +14,7 @@ if (config.env == 'development') {
   const webpack = require('webpack')
   const webpackDevMiddleware = require('webpack-dev-middleware')
   const webpackHotMiddleware = require('webpack-hot-middleware')
-  const webpackConfig = require('../../webpack.config.babel.js')
+  const webpackConfig = require('../../webpack.config.babel.js').default
 
   const compiler = webpack(webpackConfig)
   const middleware = webpackDevMiddleware(compiler, {
