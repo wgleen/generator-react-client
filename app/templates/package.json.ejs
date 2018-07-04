@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "postinstall": "if [ $NPM_CONFIG_PRODUCTION ]; then npm run build; fi",
-    "dev": "nodemon src/server/index.js --exec babel-node",
+    "dev": "nodemon src/server/server.js --exec babel-node",
     "build": "npm run build:clean && npm run build:client && npm run build:server",
     "build:destroy": "rm -rf dist",
     "build:clean": "npm run build:destroy && mkdir dist",
@@ -14,8 +14,7 @@
     "serverless": "serverless",
     "serverless:deploy": "npm run build && serverless deploy && npm run build:destroy"
     <% } else { %>
-    "start": "pm2 start dist/server -i max",
-    "start-docker": "pm2-docker start dist/server -i max"
+    "start": start dist/server/cluster -i max"
     <% } %>
   },
   "dependencies": {
@@ -25,7 +24,6 @@
     "axios": "^0.17.1",
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -41,11 +39,9 @@
     "html-webpack-plugin": "^2.30.1",
     "lodash": "^4.17.4",
     "material-ui": "^0.20.0",
+    "morgan": "^1.9.0",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
-    <% if (!serverlessInfrastructure) { %>
-    "pm2-docker": "^2.1.0",
-    <% } %>
     "postcss-custom-properties": "^6.2.0",
     "postcss-custom-selectors": "^4.0.1",
     "postcss-loader": "^2.0.10",

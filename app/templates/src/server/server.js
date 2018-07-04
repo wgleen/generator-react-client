@@ -1,7 +1,6 @@
 import config from './config'
 import logger from './lib/logger'
-
-const app = require(`./app.${config.env == 'development' ? 'development' : 'production'}.js`).default
+import app from './app'
 
 export const server = app.listen(config.port, err => {
   if (err) logger.error(err)

@@ -18,7 +18,7 @@ plugins:
 
 custom:
   s3Sync:
-    - bucketName: ${self:service}-${env:ENV}-statics
+    - bucketName: ${self:service}-assets-${self:provider.stage}
       bucketPrefix: assets/
       localDir: dist/assets
       acl: public-read 
@@ -31,4 +31,4 @@ resources:
     AssetsBucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: ${self:service}-${env:ENV}-statics
+        BucketName: ${self:service}-assets-${self:provider.stage}

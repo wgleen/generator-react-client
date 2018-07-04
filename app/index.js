@@ -20,11 +20,6 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
-        name: 'serverMiddleware',
-        message: 'The backend server is a middleware? (y|n)'
-      },
-      {
-        type: 'input',
         name: 'serverlessInfrastructure',
         message: 'The infrastructure of the aplication is serverless? (y|n)'
       },
@@ -38,7 +33,6 @@ module.exports = class extends Generator {
     .then(answers => {
       const _appName = answers.appName || this.appName
       const appTitle = helpers.toTitle(_appName)
-      const _serverMiddleware = answers.serverMiddleware == 'y'
       const serverlessInfrastructure = answers.serverlessInfrastructure == 'y'
       const serverlessRegion = answers.serverlessRegion
 
@@ -141,10 +135,9 @@ module.exports = class extends Generator {
       templatePath = 'src/client/actions'
       destinationPath = `${_appName}/src/client/actions`
 
-      this.fs.copyTpl(
+      this.fs.copy(
         this.templatePath(`${templatePath}/todosActions.ejs`),
-        this.destinationPath(`${destinationPath}/todosActions.js`),
-        { serverMiddleware: _serverMiddleware }
+        this.destinationPath(`${destinationPath}/todosActions.js`)
       )
 
       //Components files
@@ -165,11 +158,7 @@ module.exports = class extends Generator {
       this.fs.copyTpl(
         this.templatePath(`${templatePath}/environments.js.ejs`),
         this.destinationPath(`${destinationPath}/environments.js`),
-        {
-          apiURL: _serverMiddleware ?
-            config.baseURL :
-            config.fakeAPIBaseURL
-        }
+        { apiURL: config.fakeAPIBaseURL }
       )
 
       this.fs.copy(
@@ -259,66 +248,29 @@ module.exports = class extends Generator {
       templatePath = 'src/server'
       destinationPath = `${_appName}/src/server`
 
-      this.fs.copyTpl(
-        this.templatePath(`${templatePath}/app.js.ejs`),
-        this.destinationPath(`${destinationPath}/app.js`),
-        { serverMiddleware: _serverMiddleware }
+      this.fs.copy(
+        this.templatePath(`${templatePath}/app.js`),
+        this.destinationPath(`${destinationPath}/app.js`)
       )
 
       this.fs.copy(
-        this.templatePath(`${templatePath}/app.development.js`),
-        this.destinationPath(`${destinationPath}/app.development.js`)
+        this.templatePath(`${templatePath}/server.js`),
+        this.destinationPath(`${destinationPath}/server.js`)
       )
 
       this.fs.copy(
-        this.templatePath(`${templatePath}/app.production.js`),
-        this.destinationPath(`${destinationPath}/app.production.js`)
+        this.templatePath(`${templatePath}/cluster.js`),
+        this.destinationPath(`${destinationPath}/cluster.js`)
       )
-
-      this.fs.copy(
-        this.templatePath(`${templatePath}/index.js`),
-        this.destinationPath(`${destinationPath}/index.js`)
-      )
-
-      //API files
-
-      if (_serverMiddleware) {
-        templatePath = 'src/server/api'
-        destinationPath = `${_appName}/src/server/api`
-
-        this.fs.copyTpl(
-          this.templatePath(`${templatePath}/controllers.js.ejs`),
-          this.destinationPath(`${destinationPath}/controllers.js`),
-          { appName: appTitle }
-        )
-
-        this.fs.copy(
-          this.templatePath(`${templatePath}/middlewares.js`),
-          this.destinationPath(`${destinationPath}/middlewares.js`)
-        )
-
-        this.fs.copy(
-          this.templatePath(`${templatePath}/routes.js`),
-          this.destinationPath(`${destinationPath}/routes.js`)
-        )
-
-        //Todos resource files
-
-        this.fs.copy(
-          this.templatePath(`${templatePath}/todos`),
-          this.destinationPath(`${destinationPath}/todos`)
-        )
-      }
 
       //Server config files
 
       templatePath = 'src/server/config'
       destinationPath = `${_appName}/src/server/config`
 
-      this.fs.copyTpl(
-        this.templatePath(`${templatePath}/environments.js.ejs`),
-        this.destinationPath(`${destinationPath}/environments.js`),
-        { apiURL: config.fakeAPIBaseURL }
+      this.fs.copy(
+        this.templatePath(`${templatePath}/environments.js`),
+        this.destinationPath(`${destinationPath}/environments.js`)
       )
 
       this.fs.copy(

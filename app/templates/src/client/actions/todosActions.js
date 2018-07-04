@@ -32,7 +32,7 @@ export const getTodos = values => {
 
     getTodosResource()
       .then(res =>
-        dispatch(receiveTodos(res.data<%= serverMiddleware ? '.data' : null %>))
+        dispatch(receiveTodos(res.data))
       )
       .catch(err =>
         dispatch(fetchTodos(false))

@@ -4,9 +4,6 @@
     "stage-2",
     "react"
   ],
-  "plugins": [
-    "transform-runtime"
-  ],
   "sourceMaps": true,
   "retainLines": true
 }
