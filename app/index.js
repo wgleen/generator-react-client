@@ -24,7 +24,7 @@ module.exports = class extends Generator {
         message: 'The infrastructure of the aplication is serverless? (y|n)'
       },
       {
-        when: answers => answers.serverlessInfrastructure,
+        when: answers => answers.serverlessInfrastructure == 'y',
         type: 'input',
         name: 'serverlessRegion',
         message: "What's the aws region?"
