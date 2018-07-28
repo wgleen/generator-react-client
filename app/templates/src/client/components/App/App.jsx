@@ -1,12 +1,14 @@
 import React from 'react'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import MuiProvider from '../MuiProvider/MuiProvider'
+import Head from '../Head/Head'
 import Routes from '../Routes/Routes'
 
 const App = props => (
   <div>
-    <MuiThemeProvider>
+    <Head />
+    <MuiProvider>
       <Routes />
-    </MuiThemeProvider>
+    </MuiProvider>
   </div>
 )
 

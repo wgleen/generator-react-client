@@ -9,7 +9,6 @@ import {
 const envConfig = config.env == 'development' ? development : production
 
 export default merge({}, envConfig, {
-  mode: config.nodeEnv,
   resolve: {
     extensions: ['.js', '.jsx']
   },

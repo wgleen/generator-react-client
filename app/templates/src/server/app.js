@@ -3,6 +3,7 @@ import helmet from 'helmet'
 import bodyParser from 'body-parser'
 import config from './config'
 import morgan from 'morgan'
+import logger from './lib/logger'
 const app = express()
 
 app.use(morgan('tiny'))
@@ -39,7 +40,13 @@ if (config.env == 'development') {
 
   app.get('/*', (req, res) => {
     res.set('content-type', 'text/html')
-    res.write(middleware.fileSystem.readFileSync(`${config.paths.dist}/index.html`))
+
+    try {
+      res.write(middleware.fileSystem.readFileSync(`${config.paths.dist}/index.html`))
+    } catch (err) {
+      logger.error(err)
+    }
+    
     res.end()
   })
 } else {

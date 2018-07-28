@@ -1,23 +1,22 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import { ConnectedRouter } from 'connected-react-router'
+import history from '../../lib/history'
 import routePaths from '../../constants/routes'
-import DefaultLayout from '../Layouts/DefaultLayout'
+import RouteTransitions from '../RouteTransitions/RouteTransitions'
 import Todos from '../Todos/Todos'
 
 const Routes = props => {
   return (
-    <Router>
-      <DefaultLayout>
+    <ConnectedRouter history={history}>
+      <RouteTransitions>
         <Route
           exact
           path={routePaths.root.path}
           component={Todos}
         />
-      </DefaultLayout>
-    </Router>
+      </RouteTransitions>
+    </ConnectedRouter>
   )
 }
 

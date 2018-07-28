@@ -28,6 +28,11 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'serverlessRegion',
         message: "What's the aws region?"
+      },
+      {
+        type: 'input',
+        name: 'herokuInfrastructure',
+        message: 'The infrastructure of the stage is heroku? (y|n)'
       }
     ])
     .then(answers => {
@@ -36,6 +41,7 @@ module.exports = class extends Generator {
       const appTitle = helpers.toTitle(_appName)
       const serverlessInfrastructure = answers.serverlessInfrastructure == 'y'
       const serverlessRegion = answers.serverlessRegion
+      const herokuInfrastructure = answers.herokuInfrastructure == 'y'
 
       let destinationPath = rootPath
       let templatePath = '/'
@@ -76,6 +82,11 @@ module.exports = class extends Generator {
         this.templatePath('README.md.ejs'),
         this.destinationPath(`${destinationPath}/README.md`),
         { appName: appTitle }
+      )
+
+      this.fs.copy(
+        this.templatePath('Procfile'),
+        this.destinationPath(`${destinationPath}/Procfile`)
       )
 
       this.fs.copy(

@@ -1,3 +1,9 @@
-import createHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from 'history'
 
-export default createHistory()
+const _history = createBrowserHistory()
+
+_history.listen(() => {
+  window.scrollTo(0, 0)
+})
+
+export default _history

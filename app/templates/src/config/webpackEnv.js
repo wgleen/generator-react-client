@@ -1,10 +1,12 @@
 import webpack from 'webpack'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import config from './index'
 
 export const development = {
+  mode: 'development',
   devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client?reload=true',
@@ -18,19 +20,37 @@ export const development = {
   module: {
     rules: [
       {
-        test: /\.s?css$/,
-        use: [
-          'style-loader',
+        oneOf: [
           {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[path][name]__[local]--[hash:base64:5]',
-              importLoaders: 1
-            }
+            test: /\.s?css$/,
+            resourceQuery: /^\?global$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false,
+                  importLoaders: 1
+                }
+              }
+            ]
           },
-          'postcss-loader',
-          'sass-loader'
+          {
+            test: /\.s?css$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  importLoaders: 1
+                }
+              },
+              'postcss-loader',
+              'sass-loader'
+            ]
+          }
         ]
       }
     ]
@@ -53,6 +73,7 @@ export const development = {
 }
 
 export const production = {
+  mode: 'production',
   entry: [
     `${config.paths.client}/index.js`
   ],
@@ -65,27 +86,54 @@ export const production = {
   module: {
     rules: [
       {
-        test: /\.s?css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                importLoaders: 1
+        oneOf: [
+          {
+            test: /\.s?css$/,
+            resourceQuery: /^\?global$/,
+            use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: false,
+                  importLoaders: 1
+                }
               }
-            },
-            'postcss-loader',
-            'sass-loader'
-          ]
-        })
+            ]
+          },
+          {
+            test: /\.s?css$/,
+            use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                  importLoaders: 1
+                }
+              },
+              'postcss-loader',
+              'sass-loader'
+            ]
+          }
+        ]
       }
     ]
   },
   optimization: {
-    minimizer: [ new UglifyJsPlugin() ]
+    minimizer: [ 
+      new UglifyJsPlugin({
+        sourceMap: true,
+        uglifyOptions: {
+          ecma: 8,
+          output: {
+            comments: false
+          }
+        }
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
   },
   plugins: [
     new webpack.EnvironmentPlugin({
@@ -98,9 +146,11 @@ export const production = {
       filename: 'index.html'
     }),
     new webpack.LoaderOptionsPlugin({
-      minimize: false,
+      minimize: true,
       debug: false
     }),
-    new ExtractTextPlugin('[name].[chunkHash].css')
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
+    })
   ]
 }

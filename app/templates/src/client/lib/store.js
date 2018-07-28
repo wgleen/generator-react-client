@@ -1,17 +1,24 @@
 import {
   createStore,
-  applyMiddleware
+  applyMiddleware,
+  compose
 } from 'redux'
 import thunk from 'redux-thunk'
 import multi from 'redux-multi'
 import promise from 'redux-promise'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { browserHistory } from 'react-router'
-import reducers from '../reducers'
+import { connectRouter, routerMiddleware } from 'connected-react-router'
+import rootReducer from '../reducers'
+import history from './history'
 
-const middlewares = applyMiddleware(thunk, multi, promise)
+const middlewares = applyMiddleware(
+  routerMiddleware(history),
+  thunk, 
+  multi, 
+  promise
+)
 
 export const store = createStore(
-  reducers,
-  process.env.ENV == 'development' ? composeWithDevTools(middlewares) : middlewares
+  connectRouter(history)(rootReducer),
+  compose(process.env.ENV == 'development' ? composeWithDevTools(middlewares) : middlewares)
 )
