@@ -84,10 +84,11 @@ module.exports = class extends Generator {
         { appName: appTitle }
       )
 
-      this.fs.copy(
-        this.templatePath('Procfile'),
-        this.destinationPath(`${destinationPath}/Procfile`)
-      )
+      if (herokuInfrastructure)
+        this.fs.copy(
+          this.templatePath('Procfile'),
+          this.destinationPath(`${destinationPath}/Procfile`)
+        )
 
       this.fs.copy(
         this.templatePath('webpack.config.babel.js'),
@@ -242,7 +243,10 @@ module.exports = class extends Generator {
       this.fs.copyTpl(
         this.templatePath(`${templatePath}/environments.js.ejs`),
         this.destinationPath(`${destinationPath}/environments.js`),
-        { appName: _appName }
+        {
+          appName: _appName,
+          serverlessInfrastructure
+        }
       )
 
       this.fs.copy(

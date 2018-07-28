@@ -1,7 +1,7 @@
 import React from 'react'
 import { reduxForm } from 'redux-form'
 import TextFieldRedux from '../Fields/TextFieldRedux'
-import RaisedButton from 'material-ui/RaisedButton'
+import Button from '@material-ui/core/Button'
 
 let TodoForm = props => {
   const { handleSubmit } = props
@@ -13,11 +13,13 @@ let TodoForm = props => {
         hintText='Title'
       />
 
-      <RaisedButton
-        label='Submit'
-        primary={true}
+      <Button
+        variant='contained' 
+        color='primary'
         type='submit'
-      />
+      >
+        Add
+      </Button>
     </form>
   )
 }

@@ -2,14 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getTodos } from '../../actions/todosActions'
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn,
-} from 'material-ui/Table'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
 
 class TodosList extends Component {
   componentWillMount () {
@@ -27,8 +24,8 @@ class TodosList extends Component {
 
     const _todos = todos.map((todo, i) => (
       <TableRow key={i}>
-        <TableRowColumn>{todo.id}</TableRowColumn>
-        <TableRowColumn>{todo.title}</TableRowColumn>
+        <TableCell>{todo.id}</TableCell>
+        <TableCell>{todo.title}</TableCell>
       </TableRow>
     ))
 
@@ -37,12 +34,12 @@ class TodosList extends Component {
         <h2>Todo list</h2>
 
         <Table>
-          <TableHeader>
+          <TableHead>
             <TableRow>
-              <TableHeaderColumn>ID</TableHeaderColumn>
-              <TableHeaderColumn>Title</TableHeaderColumn>
+              <TableCell>ID</TableCell>
+              <TableCell>Title</TableCell>
             </TableRow>
-          </TableHeader>
+          </TableHead>
           <TableBody>
             {_todos}
           </TableBody>
