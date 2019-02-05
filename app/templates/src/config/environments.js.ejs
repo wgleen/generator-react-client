@@ -3,7 +3,7 @@ export default {
     cdnUrl: '/assets/'
   },
   stage: {
-    cdnUrl: <%= serverlessInfrastructure ? `https://s3.amazonaws.com/${appName}-assets-stage/assets/` : '/assets/' %>
+    cdnUrl: '<%= serverlessInfrastructure ? `https://s3.amazonaws.com/${appName}-assets-stage/assets/` : '/assets/' %>'
   },
   production: {
     cdnUrl: 'https://s3.amazonaws.com/<%= appName %>-assets-production/assets/'
