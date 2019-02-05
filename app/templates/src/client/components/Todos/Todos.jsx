@@ -4,9 +4,9 @@ import TodosCreate from './TodosCreate'
 
 const Todos = props => (
   <div>
-    <TodosList />
-
     <TodosCreate />
+
+    <TodosList />
   </div>
 )
 

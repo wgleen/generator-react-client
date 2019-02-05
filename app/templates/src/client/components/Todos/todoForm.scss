@@ -1,0 +1,11 @@
+.todoForm {
+  width: 300px;
+
+  & > * {
+    display: block;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+}
