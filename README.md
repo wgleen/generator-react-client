@@ -39,5 +39,10 @@ npm i && npm run dev
 
 #### Build to production|stage
 ```bash
-npm run build:production|stage
+NODE_ENV=production ENV=production|stage npm run build
+```
+
+#### Deploy to AWS production|stage (with Serverless)
+```bash
+NODE_ENV=production ENV=production|stage npm run serverless:deploy
 ```
