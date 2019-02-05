@@ -50,9 +50,6 @@ if (config.env == 'development') {
     res.end()
   })
 } else {
-  const preRender = require('prerender-node')
-
-  app.use(preRender)
   app.use(express.static(`${config.paths.dist}`))
 
   app.get('/*', (req, res) => {
