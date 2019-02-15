@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { createAndGetTodos } from '../../actions/todosActions'
-import TodosForm from './TodoForm'
+import TodosForm from './TodosForm'
 
 const TodosCreate = props => {
   const { createAndGetTodos } = props
@@ -10,6 +10,7 @@ const TodosCreate = props => {
   return (
     <div>
       <h2>Add Todo</h2>
+      
       <TodosForm onSubmit={createAndGetTodos} />
     </div>
   )

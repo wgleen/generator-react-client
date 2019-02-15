@@ -1,0 +1,520 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextFieldRedux /> should render correctly 1`] = `
+<Wrapper>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <ReduxForm>
+      <Connect(Form(Component))
+        destroyOnUnmount={true}
+        enableReinitialize={false}
+        forceUnregisterOnUnmount={false}
+        form="TodoForm"
+        getFormState={[Function]}
+        keepDirtyOnReinitialize={false}
+        persistentSubmitErrors={false}
+        pure={true}
+        shouldAsyncValidate={[Function]}
+        shouldError={[Function]}
+        shouldValidate={[Function]}
+        shouldWarn={[Function]}
+        touchOnBlur={true}
+        touchOnChange={false}
+        updateUnregisteredFields={false}
+      >
+        <Form(Component)
+          anyTouched={false}
+          array={
+            Object {
+              "insert": [Function],
+              "move": [Function],
+              "pop": [Function],
+              "push": [Function],
+              "remove": [Function],
+              "removeAll": [Function],
+              "shift": [Function],
+              "splice": [Function],
+              "swap": [Function],
+              "unshift": [Function],
+            }
+          }
+          arrayInsert={[Function]}
+          arrayMove={[Function]}
+          arrayPop={[Function]}
+          arrayPush={[Function]}
+          arrayRemove={[Function]}
+          arrayRemoveAll={[Function]}
+          arrayShift={[Function]}
+          arraySplice={[Function]}
+          arraySwap={[Function]}
+          arrayUnshift={[Function]}
+          asyncValidating={false}
+          autofill={[Function]}
+          blur={[Function]}
+          change={[Function]}
+          clearAsyncError={[Function]}
+          clearFields={[Function]}
+          clearSubmit={[Function]}
+          clearSubmitErrors={[Function]}
+          destroy={[Function]}
+          destroyOnUnmount={true}
+          dirty={false}
+          dispatch={[Function]}
+          enableReinitialize={false}
+          focus={[Function]}
+          forceUnregisterOnUnmount={false}
+          form="TodoForm"
+          getFormState={[Function]}
+          initialize={[Function]}
+          initialized={false}
+          invalid={false}
+          keepDirtyOnReinitialize={false}
+          persistentSubmitErrors={false}
+          pristine={true}
+          pure={true}
+          registerField={[Function]}
+          registeredFields={
+            Object {
+              "test": Object {
+                "count": 1,
+                "name": "test",
+                "type": "Field",
+              },
+            }
+          }
+          reset={[Function]}
+          resetSection={[Function]}
+          setSubmitFailed={[Function]}
+          setSubmitSucceeded={[Function]}
+          shouldAsyncValidate={[Function]}
+          shouldError={[Function]}
+          shouldValidate={[Function]}
+          shouldWarn={[Function]}
+          startAsyncValidation={[Function]}
+          startSubmit={[Function]}
+          stopAsyncValidation={[Function]}
+          stopSubmit={[Function]}
+          submit={[Function]}
+          submitFailed={false}
+          submitSucceeded={false}
+          submitting={false}
+          syncErrors={Object {}}
+          syncWarnings={Object {}}
+          touch={[Function]}
+          touchOnBlur={true}
+          touchOnChange={false}
+          unregisterField={[Function]}
+          untouch={[Function]}
+          updateSyncErrors={[Function]}
+          updateSyncWarnings={[Function]}
+          updateUnregisteredFields={false}
+          valid={true}
+          validExceptSubmit={true}
+          values={Object {}}
+        >
+          <Component
+            anyTouched={false}
+            array={
+              Object {
+                "insert": [Function],
+                "move": [Function],
+                "pop": [Function],
+                "push": [Function],
+                "remove": [Function],
+                "removeAll": [Function],
+                "shift": [Function],
+                "splice": [Function],
+                "swap": [Function],
+                "unshift": [Function],
+              }
+            }
+            asyncValidate={[Function]}
+            asyncValidating={false}
+            autofill={[Function]}
+            blur={[Function]}
+            change={[Function]}
+            clearAsyncError={[Function]}
+            clearFields={[Function]}
+            clearSubmit={[Function]}
+            clearSubmitErrors={[Function]}
+            destroy={[Function]}
+            dirty={false}
+            dispatch={[Function]}
+            form="TodoForm"
+            handleSubmit={[Function]}
+            initialize={[Function]}
+            initialized={false}
+            invalid={false}
+            pristine={true}
+            pure={true}
+            reset={[Function]}
+            resetSection={[Function]}
+            submit={[Function]}
+            submitFailed={false}
+            submitSucceeded={false}
+            submitting={false}
+            touch={[Function]}
+            untouch={[Function]}
+            valid={true}
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <TextFieldRedux
+                name="test"
+              >
+                <Field
+                  component={[Function]}
+                  name="test"
+                >
+                  <Connect(ConnectedField)
+                    _reduxForm={
+                      Object {
+                        "anyTouched": false,
+                        "array": Object {
+                          "insert": [Function],
+                          "move": [Function],
+                          "pop": [Function],
+                          "push": [Function],
+                          "remove": [Function],
+                          "removeAll": [Function],
+                          "shift": [Function],
+                          "splice": [Function],
+                          "swap": [Function],
+                          "unshift": [Function],
+                        },
+                        "arrayInsert": [Function],
+                        "arrayMove": [Function],
+                        "arrayPop": [Function],
+                        "arrayPush": [Function],
+                        "arrayRemove": [Function],
+                        "arrayRemoveAll": [Function],
+                        "arrayShift": [Function],
+                        "arraySplice": [Function],
+                        "arraySwap": [Function],
+                        "arrayUnshift": [Function],
+                        "asyncErrors": undefined,
+                        "asyncValidate": [Function],
+                        "asyncValidating": false,
+                        "autofill": [Function],
+                        "blur": [Function],
+                        "change": [Function],
+                        "clearAsyncError": [Function],
+                        "clearFields": [Function],
+                        "clearSubmit": [Function],
+                        "clearSubmitErrors": [Function],
+                        "destroy": [Function],
+                        "destroyOnUnmount": true,
+                        "dirty": false,
+                        "dispatch": [Function],
+                        "enableReinitialize": false,
+                        "error": undefined,
+                        "focus": [Function],
+                        "forceUnregisterOnUnmount": false,
+                        "form": "TodoForm",
+                        "getFormState": [Function],
+                        "getValues": [Function],
+                        "initialValues": undefined,
+                        "initialize": [Function],
+                        "initialized": false,
+                        "invalid": false,
+                        "keepDirtyOnReinitialize": false,
+                        "persistentSubmitErrors": false,
+                        "pristine": true,
+                        "pure": true,
+                        "register": [Function],
+                        "registerField": [Function],
+                        "registerInnerOnSubmit": [Function],
+                        "registeredFields": undefined,
+                        "reset": [Function],
+                        "resetSection": [Function],
+                        "sectionPrefix": undefined,
+                        "setSubmitFailed": [Function],
+                        "setSubmitSucceeded": [Function],
+                        "shouldAsyncValidate": [Function],
+                        "shouldError": [Function],
+                        "shouldValidate": [Function],
+                        "shouldWarn": [Function],
+                        "startAsyncValidation": [Function],
+                        "startSubmit": [Function],
+                        "stopAsyncValidation": [Function],
+                        "stopSubmit": [Function],
+                        "submit": [Function],
+                        "submitFailed": false,
+                        "submitSucceeded": false,
+                        "submitting": false,
+                        "syncErrors": Object {},
+                        "syncWarnings": Object {},
+                        "touch": [Function],
+                        "touchOnBlur": true,
+                        "touchOnChange": false,
+                        "triggerSubmit": undefined,
+                        "unregister": [Function],
+                        "unregisterField": [Function],
+                        "untouch": [Function],
+                        "updateSyncErrors": [Function],
+                        "updateSyncWarnings": [Function],
+                        "updateUnregisteredFields": false,
+                        "valid": true,
+                        "validExceptSubmit": true,
+                        "values": Object {},
+                        "warning": undefined,
+                      }
+                    }
+                    component={[Function]}
+                    name="test"
+                    normalize={[Function]}
+                  >
+                    <ConnectedField
+                      _reduxForm={
+                        Object {
+                          "anyTouched": false,
+                          "array": Object {
+                            "insert": [Function],
+                            "move": [Function],
+                            "pop": [Function],
+                            "push": [Function],
+                            "remove": [Function],
+                            "removeAll": [Function],
+                            "shift": [Function],
+                            "splice": [Function],
+                            "swap": [Function],
+                            "unshift": [Function],
+                          },
+                          "arrayInsert": [Function],
+                          "arrayMove": [Function],
+                          "arrayPop": [Function],
+                          "arrayPush": [Function],
+                          "arrayRemove": [Function],
+                          "arrayRemoveAll": [Function],
+                          "arrayShift": [Function],
+                          "arraySplice": [Function],
+                          "arraySwap": [Function],
+                          "arrayUnshift": [Function],
+                          "asyncErrors": undefined,
+                          "asyncValidate": [Function],
+                          "asyncValidating": false,
+                          "autofill": [Function],
+                          "blur": [Function],
+                          "change": [Function],
+                          "clearAsyncError": [Function],
+                          "clearFields": [Function],
+                          "clearSubmit": [Function],
+                          "clearSubmitErrors": [Function],
+                          "destroy": [Function],
+                          "destroyOnUnmount": true,
+                          "dirty": false,
+                          "dispatch": [Function],
+                          "enableReinitialize": false,
+                          "error": undefined,
+                          "focus": [Function],
+                          "forceUnregisterOnUnmount": false,
+                          "form": "TodoForm",
+                          "getFormState": [Function],
+                          "getValues": [Function],
+                          "initialValues": undefined,
+                          "initialize": [Function],
+                          "initialized": false,
+                          "invalid": false,
+                          "keepDirtyOnReinitialize": false,
+                          "persistentSubmitErrors": false,
+                          "pristine": true,
+                          "pure": true,
+                          "register": [Function],
+                          "registerField": [Function],
+                          "registerInnerOnSubmit": [Function],
+                          "registeredFields": undefined,
+                          "reset": [Function],
+                          "resetSection": [Function],
+                          "sectionPrefix": undefined,
+                          "setSubmitFailed": [Function],
+                          "setSubmitSucceeded": [Function],
+                          "shouldAsyncValidate": [Function],
+                          "shouldError": [Function],
+                          "shouldValidate": [Function],
+                          "shouldWarn": [Function],
+                          "startAsyncValidation": [Function],
+                          "startSubmit": [Function],
+                          "stopAsyncValidation": [Function],
+                          "stopSubmit": [Function],
+                          "submit": [Function],
+                          "submitFailed": false,
+                          "submitSucceeded": false,
+                          "submitting": false,
+                          "syncErrors": Object {},
+                          "syncWarnings": Object {},
+                          "touch": [Function],
+                          "touchOnBlur": true,
+                          "touchOnChange": false,
+                          "triggerSubmit": undefined,
+                          "unregister": [Function],
+                          "unregisterField": [Function],
+                          "untouch": [Function],
+                          "updateSyncErrors": [Function],
+                          "updateSyncWarnings": [Function],
+                          "updateUnregisteredFields": false,
+                          "valid": true,
+                          "validExceptSubmit": true,
+                          "values": Object {},
+                          "warning": undefined,
+                        }
+                      }
+                      asyncValidating={false}
+                      component={[Function]}
+                      dirty={false}
+                      dispatch={[Function]}
+                      name="test"
+                      normalize={[Function]}
+                      pristine={true}
+                    >
+                      <ReduxFormMaterialUITextField
+                        input={
+                          Object {
+                            "name": "test",
+                            "onBlur": [Function],
+                            "onChange": [Function],
+                            "onDragStart": [Function],
+                            "onDrop": [Function],
+                            "onFocus": [Function],
+                            "value": "",
+                          }
+                        }
+                        meta={
+                          Object {
+                            "active": false,
+                            "asyncValidating": false,
+                            "autofilled": false,
+                            "dirty": false,
+                            "dispatch": [Function],
+                            "error": undefined,
+                            "form": "TodoForm",
+                            "initial": undefined,
+                            "invalid": false,
+                            "pristine": true,
+                            "submitFailed": false,
+                            "submitting": false,
+                            "touched": false,
+                            "valid": true,
+                            "visited": false,
+                            "warning": undefined,
+                          }
+                        }
+                      >
+                        <TextField
+                          name="test"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onDragStart={[Function]}
+                          onDrop={[Function]}
+                          onFocus={[Function]}
+                          required={false}
+                          select={false}
+                          value=""
+                        >
+                          <WithStyles(FormControl)
+                            onDragStart={[Function]}
+                            onDrop={[Function]}
+                            required={false}
+                          >
+                            <FormControl
+                              classes={
+                                Object {
+                                  "fullWidth": "MuiFormControl-fullWidth-4",
+                                  "marginDense": "MuiFormControl-marginDense-3",
+                                  "marginNormal": "MuiFormControl-marginNormal-2",
+                                  "root": "MuiFormControl-root-1",
+                                }
+                              }
+                              component="div"
+                              disabled={false}
+                              error={false}
+                              fullWidth={false}
+                              margin="none"
+                              onDragStart={[Function]}
+                              onDrop={[Function]}
+                              required={false}
+                            >
+                              <div
+                                className="MuiFormControl-root-1"
+                                onDragStart={[Function]}
+                                onDrop={[Function]}
+                              >
+                                <WithStyles(Input)
+                                  name="test"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  value=""
+                                >
+                                  <Input
+                                    classes={
+                                      Object {
+                                        "disabled": "MuiInput-disabled-8",
+                                        "error": "MuiInput-error-10",
+                                        "focused": "MuiInput-focused-7",
+                                        "formControl": "MuiInput-formControl-6",
+                                        "fullWidth": "MuiInput-fullWidth-12",
+                                        "input": "MuiInput-input-13",
+                                        "inputMarginDense": "MuiInput-inputMarginDense-14",
+                                        "inputMultiline": "MuiInput-inputMultiline-15",
+                                        "inputType": "MuiInput-inputType-16",
+                                        "inputTypeSearch": "MuiInput-inputTypeSearch-17",
+                                        "multiline": "MuiInput-multiline-11",
+                                        "root": "MuiInput-root-5",
+                                        "underline": "MuiInput-underline-9",
+                                      }
+                                    }
+                                    disableUnderline={false}
+                                    fullWidth={false}
+                                    multiline={false}
+                                    name="test"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onFocus={[Function]}
+                                    type="text"
+                                    value=""
+                                  >
+                                    <div
+                                      className="MuiInput-root-5 MuiInput-formControl-6 MuiInput-underline-9"
+                                    >
+                                      <input
+                                        aria-invalid={false}
+                                        className="MuiInput-input-13"
+                                        disabled={false}
+                                        name="test"
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onFocus={[Function]}
+                                        required={false}
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </Input>
+                                </WithStyles(Input)>
+                              </div>
+                            </FormControl>
+                          </WithStyles(FormControl)>
+                        </TextField>
+                      </ReduxFormMaterialUITextField>
+                    </ConnectedField>
+                  </Connect(ConnectedField)>
+                </Field>
+              </TextFieldRedux>
+            </form>
+          </Component>
+        </Form(Component)>
+      </Connect(Form(Component))>
+    </ReduxForm>
+  </Provider>
+</Wrapper>
+`;

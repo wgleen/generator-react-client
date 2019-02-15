@@ -1,0 +1,601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodosList /> should render correctly 1`] = `
+<Wrapper>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(TodosList)>
+      <TodosList
+        getTodos={[Function]}
+        received={true}
+        todos={
+          Array [
+            Object {
+              "id": 0,
+              "title": "Internal Configuration Technician",
+            },
+            Object {
+              "id": 1,
+              "title": "Chief Web Engineer",
+            },
+            Object {
+              "id": 2,
+              "title": "Global Functionality Planner",
+            },
+            Object {
+              "id": 3,
+              "title": "National Group Facilitator",
+            },
+            Object {
+              "id": 4,
+              "title": "Corporate Branding Analyst",
+            },
+            Object {
+              "id": 5,
+              "title": "Global Response Designer",
+            },
+          ]
+        }
+      >
+        <div>
+          <h2>
+            Todo list
+          </h2>
+          <WithStyles(Table)>
+            <Table
+              classes={
+                Object {
+                  "root": "MuiTable-root-1",
+                }
+              }
+              component="table"
+              padding="default"
+            >
+              <table
+                className="MuiTable-root-1"
+              >
+                <WithStyles(TableHead)>
+                  <TableHead
+                    classes={
+                      Object {
+                        "root": "MuiTableHead-root-2",
+                      }
+                    }
+                    component="thead"
+                  >
+                    <thead
+                      className="MuiTableHead-root-2"
+                    >
+                      <WithStyles(TableRow)>
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3 MuiTableRow-head-6"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <th
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-head-9"
+                                  scope="col"
+                                >
+                                  ID
+                                </th>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <th
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-head-9"
+                                  scope="col"
+                                >
+                                  Title
+                                </th>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                    </thead>
+                  </TableHead>
+                </WithStyles(TableHead)>
+                <WithStyles(TableBody)>
+                  <TableBody
+                    classes={
+                      Object {
+                        "root": "MuiTableBody-root-16",
+                      }
+                    }
+                    component="tbody"
+                  >
+                    <tbody
+                      className="MuiTableBody-root-16"
+                    >
+                      <WithStyles(TableRow)
+                        key="0"
+                      >
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  0
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  Internal Configuration Technician
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                      <WithStyles(TableRow)
+                        key="1"
+                      >
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  1
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  Chief Web Engineer
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                      <WithStyles(TableRow)
+                        key="2"
+                      >
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  2
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  Global Functionality Planner
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                      <WithStyles(TableRow)
+                        key="3"
+                      >
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  3
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  National Group Facilitator
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                      <WithStyles(TableRow)
+                        key="4"
+                      >
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  4
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  Corporate Branding Analyst
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                      <WithStyles(TableRow)
+                        key="5"
+                      >
+                        <TableRow
+                          classes={
+                            Object {
+                              "footer": "MuiTableRow-footer-7",
+                              "head": "MuiTableRow-head-6",
+                              "hover": "MuiTableRow-hover-5",
+                              "root": "MuiTableRow-root-3",
+                              "selected": "MuiTableRow-selected-4",
+                            }
+                          }
+                          component="tr"
+                          hover={false}
+                          selected={false}
+                        >
+                          <tr
+                            className="MuiTableRow-root-3"
+                          >
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  5
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                            <WithStyles(TableCell)>
+                              <TableCell
+                                classes={
+                                  Object {
+                                    "body": "MuiTableCell-body-10",
+                                    "footer": "MuiTableCell-footer-11",
+                                    "head": "MuiTableCell-head-9",
+                                    "numeric": "MuiTableCell-numeric-12",
+                                    "paddingCheckbox": "MuiTableCell-paddingCheckbox-14",
+                                    "paddingDense": "MuiTableCell-paddingDense-13",
+                                    "paddingNone": "MuiTableCell-paddingNone-15",
+                                    "root": "MuiTableCell-root-8",
+                                  }
+                                }
+                                numeric={false}
+                              >
+                                <td
+                                  aria-sort={null}
+                                  className="MuiTableCell-root-8 MuiTableCell-body-10"
+                                >
+                                  Global Response Designer
+                                </td>
+                              </TableCell>
+                            </WithStyles(TableCell)>
+                          </tr>
+                        </TableRow>
+                      </WithStyles(TableRow)>
+                    </tbody>
+                  </TableBody>
+                </WithStyles(TableBody)>
+              </table>
+            </Table>
+          </WithStyles(Table)>
+        </div>
+      </TodosList>
+    </Connect(TodosList)>
+  </Provider>
+</Wrapper>
+`;

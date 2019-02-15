@@ -49,9 +49,14 @@ class TodosList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  todos: state.todosReducer.todos.content
-})
+const mapStateToProps = state => {
+  const _state = state.todosReducer.todos
+
+  return {
+    todos: _state.content,
+    received: _state.received
+  }
+}
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ getTodos }, dispatch)

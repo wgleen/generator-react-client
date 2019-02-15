@@ -53,6 +53,12 @@ module.exports = class extends Generator {
         this.destinationPath(`${destinationPath}/.babelrc`)
       )
 
+      this.fs.copyTpl(
+        this.templatePath('jest.config.json.ejs'),
+        this.destinationPath(`${destinationPath}/jest.config.json`),
+        { appName: _appName }
+      )
+
       this.fs.copy(
         this.templatePath('_.gitignore'),
         this.destinationPath(`${destinationPath}/.gitignore`)
@@ -120,6 +126,15 @@ module.exports = class extends Generator {
       this.fs.copy(
         this.templatePath(`${templatePath}/.gitkeep`),
         this.destinationPath(`${destinationPath}/.gitkeep`)
+      )
+
+      //Test files
+      templatePath = 'test'
+      destinationPath = `${rootPath}/test`
+
+      this.fs.copy(
+        this.templatePath(`${templatePath}/helpers.js`),
+        this.destinationPath(`${destinationPath}/helpers.js`)
       )
 
       //Client files

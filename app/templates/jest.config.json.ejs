@@ -1,0 +1,13 @@
+{
+  "name": "<%= appName %>",
+  "verbose": true,
+  "setupFilesAfterEnv": ["./node_modules/jest-enzyme/lib/index.js"],
+  "testEnvironment": "enzyme",
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "setupFiles": ["./test/helpers.js"],
+  "moduleNameMapper": {
+    "\\.(css|scss)$": "identity-obj-proxy"
+  }
+}

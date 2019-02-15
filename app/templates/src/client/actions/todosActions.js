@@ -20,9 +20,7 @@ const receiveTodos = values => ({
 export const createAndGetTodos = values => {
   return dispatch => {
     createTodosResource(values)
-      .then(res =>
-        dispatch(getTodos())
-      )
+      .then(res => dispatch(getTodos()))
   }
 }
 
@@ -31,11 +29,7 @@ export const getTodos = values => {
     dispatch(fetchTodos())
 
     getTodosResource()
-      .then(res =>
-        dispatch(receiveTodos(res.data))
-      )
-      .catch(err =>
-        dispatch(fetchTodos(false))
-      )
+      .then(res => dispatch(receiveTodos(res.data)))
+      .catch(err => dispatch(fetchTodos(false)))
   }
 }

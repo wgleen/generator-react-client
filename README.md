@@ -24,6 +24,7 @@ yo react-client myproject
 
 #### Stack
 - Node
+- Serverless (AWS Lambda + API Gateway + S3)
 - Webpack
 - ES6 (Babel)
 - React
@@ -31,6 +32,7 @@ yo react-client myproject
 - Redux / Redux Form
 - PostCSS / SASS
 - Material UI
+- Jest / Enzyme / Chai
 
 #### Initialization
 ```bash
@@ -40,6 +42,12 @@ npm i && npm run dev
 #### Build to production|stage
 ```bash
 NODE_ENV=production ENV=production|stage npm run build
+```
+
+#### Testing
+## Using jest with enzyme and chai (see examples on /components)
+```bash
+npm test
 ```
 
 #### Deploy to AWS production|stage (with Serverless)

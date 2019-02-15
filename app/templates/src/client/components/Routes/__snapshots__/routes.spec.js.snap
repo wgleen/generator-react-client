@@ -1,0 +1,1575 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Routes /> should render correctly 1`] = `
+<Wrapper>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter>
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "6wfaju",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "6wfaju",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Routes>
+          <RouteTransitions>
+            <RouteWrapper
+              atActive={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              atEnter={
+                Object {
+                  "opacity": 0,
+                }
+              }
+              atLeave={
+                Object {
+                  "opacity": 0,
+                }
+              }
+              className="route-wrapper"
+            >
+              <Route>
+                <AnimatedSwitch
+                  atActive={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  atEnter={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                  atLeave={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                  className="route-wrapper"
+                  location={
+                    Object {
+                      "hash": "",
+                      "key": "6wfaju",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                >
+                  <RouteTransition
+                    atActive={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                    atEnter={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                    atLeave={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                    className="route-wrapper"
+                    mapStyles={[Function]}
+                    runOnMount={false}
+                    wrapperComponent="div"
+                  >
+                    <TransitionMotion
+                      defaultStyles={null}
+                      didLeave={[Function]}
+                      styles={
+                        Array [
+                          Object {
+                            "data": <Switch
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "key": "6wfaju",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                            >
+                              <Route
+                                component={[Function]}
+                                exact={true}
+                                path="/"
+                              />
+                            </Switch>,
+                            "key": "6wfaju",
+                            "style": Object {
+                              "opacity": Object {
+                                "damping": 26,
+                                "precision": 0.01,
+                                "stiffness": 170,
+                                "val": 1,
+                              },
+                            },
+                          },
+                        ]
+                      }
+                      willEnter={[Function]}
+                      willLeave={[Function]}
+                    >
+                      <div
+                        className="route-wrapper"
+                      >
+                        <div
+                          key="6wfaju"
+                          style={
+                            Object {
+                              "opacity": 1,
+                            }
+                          }
+                        >
+                          <Switch
+                            key="6wfaju"
+                            location={
+                              Object {
+                                "hash": "",
+                                "key": "6wfaju",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                          >
+                            <Route
+                              component={[Function]}
+                              computedMatch={
+                                Object {
+                                  "isExact": true,
+                                  "params": Object {},
+                                  "path": "/",
+                                  "url": "/",
+                                }
+                              }
+                              exact={true}
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "key": "6wfaju",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                              path="/"
+                            >
+                              <Todos
+                                history={
+                                  Object {
+                                    "action": "POP",
+                                    "block": [Function],
+                                    "canGo": [Function],
+                                    "createHref": [Function],
+                                    "entries": Array [
+                                      Object {
+                                        "hash": "",
+                                        "key": "6wfaju",
+                                        "pathname": "/",
+                                        "search": "",
+                                        "state": undefined,
+                                      },
+                                    ],
+                                    "go": [Function],
+                                    "goBack": [Function],
+                                    "goForward": [Function],
+                                    "index": 0,
+                                    "length": 1,
+                                    "listen": [Function],
+                                    "location": Object {
+                                      "hash": "",
+                                      "key": "6wfaju",
+                                      "pathname": "/",
+                                      "search": "",
+                                      "state": undefined,
+                                    },
+                                    "push": [Function],
+                                    "replace": [Function],
+                                  }
+                                }
+                                location={
+                                  Object {
+                                    "hash": "",
+                                    "key": "6wfaju",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  }
+                                }
+                                match={
+                                  Object {
+                                    "isExact": true,
+                                    "params": Object {},
+                                    "path": "/",
+                                    "url": "/",
+                                  }
+                                }
+                              >
+                                <div>
+                                  <Connect(TodosCreate)>
+                                    <TodosCreate
+                                      createAndGetTodos={[Function]}
+                                    >
+                                      <div>
+                                        <h2>
+                                          Add Todo
+                                        </h2>
+                                        <ReduxForm
+                                          onSubmit={[Function]}
+                                        >
+                                          <Connect(Form(TodosForm))
+                                            destroyOnUnmount={true}
+                                            enableReinitialize={false}
+                                            forceUnregisterOnUnmount={false}
+                                            form="TodoForm"
+                                            getFormState={[Function]}
+                                            keepDirtyOnReinitialize={false}
+                                            onSubmit={[Function]}
+                                            persistentSubmitErrors={false}
+                                            pure={true}
+                                            shouldAsyncValidate={[Function]}
+                                            shouldError={[Function]}
+                                            shouldValidate={[Function]}
+                                            shouldWarn={[Function]}
+                                            touchOnBlur={true}
+                                            touchOnChange={false}
+                                            updateUnregisteredFields={false}
+                                          >
+                                            <Form(TodosForm)
+                                              anyTouched={false}
+                                              array={
+                                                Object {
+                                                  "insert": [Function],
+                                                  "move": [Function],
+                                                  "pop": [Function],
+                                                  "push": [Function],
+                                                  "remove": [Function],
+                                                  "removeAll": [Function],
+                                                  "shift": [Function],
+                                                  "splice": [Function],
+                                                  "swap": [Function],
+                                                  "unshift": [Function],
+                                                }
+                                              }
+                                              arrayInsert={[Function]}
+                                              arrayMove={[Function]}
+                                              arrayPop={[Function]}
+                                              arrayPush={[Function]}
+                                              arrayRemove={[Function]}
+                                              arrayRemoveAll={[Function]}
+                                              arrayShift={[Function]}
+                                              arraySplice={[Function]}
+                                              arraySwap={[Function]}
+                                              arrayUnshift={[Function]}
+                                              asyncValidating={false}
+                                              autofill={[Function]}
+                                              blur={[Function]}
+                                              change={[Function]}
+                                              clearAsyncError={[Function]}
+                                              clearFields={[Function]}
+                                              clearSubmit={[Function]}
+                                              clearSubmitErrors={[Function]}
+                                              destroy={[Function]}
+                                              destroyOnUnmount={true}
+                                              dirty={false}
+                                              dispatch={[Function]}
+                                              enableReinitialize={false}
+                                              focus={[Function]}
+                                              forceUnregisterOnUnmount={false}
+                                              form="TodoForm"
+                                              getFormState={[Function]}
+                                              initialize={[Function]}
+                                              initialized={false}
+                                              invalid={false}
+                                              keepDirtyOnReinitialize={false}
+                                              onSubmit={[Function]}
+                                              persistentSubmitErrors={false}
+                                              pristine={true}
+                                              pure={true}
+                                              registerField={[Function]}
+                                              registeredFields={
+                                                Object {
+                                                  "title": Object {
+                                                    "count": 1,
+                                                    "name": "title",
+                                                    "type": "Field",
+                                                  },
+                                                }
+                                              }
+                                              reset={[Function]}
+                                              resetSection={[Function]}
+                                              setSubmitFailed={[Function]}
+                                              setSubmitSucceeded={[Function]}
+                                              shouldAsyncValidate={[Function]}
+                                              shouldError={[Function]}
+                                              shouldValidate={[Function]}
+                                              shouldWarn={[Function]}
+                                              startAsyncValidation={[Function]}
+                                              startSubmit={[Function]}
+                                              stopAsyncValidation={[Function]}
+                                              stopSubmit={[Function]}
+                                              submit={[Function]}
+                                              submitFailed={false}
+                                              submitSucceeded={false}
+                                              submitting={false}
+                                              syncErrors={Object {}}
+                                              syncWarnings={Object {}}
+                                              touch={[Function]}
+                                              touchOnBlur={true}
+                                              touchOnChange={false}
+                                              unregisterField={[Function]}
+                                              untouch={[Function]}
+                                              updateSyncErrors={[Function]}
+                                              updateSyncWarnings={[Function]}
+                                              updateUnregisteredFields={false}
+                                              valid={true}
+                                              validExceptSubmit={true}
+                                              values={Object {}}
+                                            >
+                                              <TodosForm
+                                                anyTouched={false}
+                                                array={
+                                                  Object {
+                                                    "insert": [Function],
+                                                    "move": [Function],
+                                                    "pop": [Function],
+                                                    "push": [Function],
+                                                    "remove": [Function],
+                                                    "removeAll": [Function],
+                                                    "shift": [Function],
+                                                    "splice": [Function],
+                                                    "swap": [Function],
+                                                    "unshift": [Function],
+                                                  }
+                                                }
+                                                asyncValidate={[Function]}
+                                                asyncValidating={false}
+                                                autofill={[Function]}
+                                                blur={[Function]}
+                                                change={[Function]}
+                                                clearAsyncError={[Function]}
+                                                clearFields={[Function]}
+                                                clearSubmit={[Function]}
+                                                clearSubmitErrors={[Function]}
+                                                destroy={[Function]}
+                                                dirty={false}
+                                                dispatch={[Function]}
+                                                form="TodoForm"
+                                                handleSubmit={[Function]}
+                                                initialize={[Function]}
+                                                initialized={false}
+                                                invalid={false}
+                                                onSubmit={[Function]}
+                                                pristine={true}
+                                                pure={true}
+                                                reset={[Function]}
+                                                resetSection={[Function]}
+                                                submit={[Function]}
+                                                submitFailed={false}
+                                                submitSucceeded={false}
+                                                submitting={false}
+                                                touch={[Function]}
+                                                untouch={[Function]}
+                                                valid={true}
+                                              >
+                                                <form
+                                                  className="todosForm"
+                                                  onSubmit={[Function]}
+                                                >
+                                                  <div>
+                                                    <TextFieldRedux
+                                                      fullWidth={true}
+                                                      label="Title"
+                                                      margin="normal"
+                                                      name="title"
+                                                    >
+                                                      <Field
+                                                        component={[Function]}
+                                                        fullWidth={true}
+                                                        label="Title"
+                                                        margin="normal"
+                                                        name="title"
+                                                      >
+                                                        <Connect(ConnectedField)
+                                                          _reduxForm={
+                                                            Object {
+                                                              "anyTouched": false,
+                                                              "array": Object {
+                                                                "insert": [Function],
+                                                                "move": [Function],
+                                                                "pop": [Function],
+                                                                "push": [Function],
+                                                                "remove": [Function],
+                                                                "removeAll": [Function],
+                                                                "shift": [Function],
+                                                                "splice": [Function],
+                                                                "swap": [Function],
+                                                                "unshift": [Function],
+                                                              },
+                                                              "arrayInsert": [Function],
+                                                              "arrayMove": [Function],
+                                                              "arrayPop": [Function],
+                                                              "arrayPush": [Function],
+                                                              "arrayRemove": [Function],
+                                                              "arrayRemoveAll": [Function],
+                                                              "arrayShift": [Function],
+                                                              "arraySplice": [Function],
+                                                              "arraySwap": [Function],
+                                                              "arrayUnshift": [Function],
+                                                              "asyncErrors": undefined,
+                                                              "asyncValidate": [Function],
+                                                              "asyncValidating": false,
+                                                              "autofill": [Function],
+                                                              "blur": [Function],
+                                                              "change": [Function],
+                                                              "clearAsyncError": [Function],
+                                                              "clearFields": [Function],
+                                                              "clearSubmit": [Function],
+                                                              "clearSubmitErrors": [Function],
+                                                              "destroy": [Function],
+                                                              "destroyOnUnmount": true,
+                                                              "dirty": false,
+                                                              "dispatch": [Function],
+                                                              "enableReinitialize": false,
+                                                              "error": undefined,
+                                                              "focus": [Function],
+                                                              "forceUnregisterOnUnmount": false,
+                                                              "form": "TodoForm",
+                                                              "getFormState": [Function],
+                                                              "getValues": [Function],
+                                                              "initialValues": undefined,
+                                                              "initialize": [Function],
+                                                              "initialized": false,
+                                                              "invalid": false,
+                                                              "keepDirtyOnReinitialize": false,
+                                                              "onSubmit": [Function],
+                                                              "persistentSubmitErrors": false,
+                                                              "pristine": true,
+                                                              "pure": true,
+                                                              "register": [Function],
+                                                              "registerField": [Function],
+                                                              "registerInnerOnSubmit": [Function],
+                                                              "registeredFields": undefined,
+                                                              "reset": [Function],
+                                                              "resetSection": [Function],
+                                                              "sectionPrefix": undefined,
+                                                              "setSubmitFailed": [Function],
+                                                              "setSubmitSucceeded": [Function],
+                                                              "shouldAsyncValidate": [Function],
+                                                              "shouldError": [Function],
+                                                              "shouldValidate": [Function],
+                                                              "shouldWarn": [Function],
+                                                              "startAsyncValidation": [Function],
+                                                              "startSubmit": [Function],
+                                                              "stopAsyncValidation": [Function],
+                                                              "stopSubmit": [Function],
+                                                              "submit": [Function],
+                                                              "submitFailed": false,
+                                                              "submitSucceeded": false,
+                                                              "submitting": false,
+                                                              "syncErrors": Object {},
+                                                              "syncWarnings": Object {},
+                                                              "touch": [Function],
+                                                              "touchOnBlur": true,
+                                                              "touchOnChange": false,
+                                                              "triggerSubmit": undefined,
+                                                              "unregister": [Function],
+                                                              "unregisterField": [Function],
+                                                              "untouch": [Function],
+                                                              "updateSyncErrors": [Function],
+                                                              "updateSyncWarnings": [Function],
+                                                              "updateUnregisteredFields": false,
+                                                              "valid": true,
+                                                              "validExceptSubmit": true,
+                                                              "values": Object {},
+                                                              "warning": undefined,
+                                                            }
+                                                          }
+                                                          component={[Function]}
+                                                          fullWidth={true}
+                                                          label="Title"
+                                                          margin="normal"
+                                                          name="title"
+                                                          normalize={[Function]}
+                                                        >
+                                                          <ConnectedField
+                                                            _reduxForm={
+                                                              Object {
+                                                                "anyTouched": false,
+                                                                "array": Object {
+                                                                  "insert": [Function],
+                                                                  "move": [Function],
+                                                                  "pop": [Function],
+                                                                  "push": [Function],
+                                                                  "remove": [Function],
+                                                                  "removeAll": [Function],
+                                                                  "shift": [Function],
+                                                                  "splice": [Function],
+                                                                  "swap": [Function],
+                                                                  "unshift": [Function],
+                                                                },
+                                                                "arrayInsert": [Function],
+                                                                "arrayMove": [Function],
+                                                                "arrayPop": [Function],
+                                                                "arrayPush": [Function],
+                                                                "arrayRemove": [Function],
+                                                                "arrayRemoveAll": [Function],
+                                                                "arrayShift": [Function],
+                                                                "arraySplice": [Function],
+                                                                "arraySwap": [Function],
+                                                                "arrayUnshift": [Function],
+                                                                "asyncErrors": undefined,
+                                                                "asyncValidate": [Function],
+                                                                "asyncValidating": false,
+                                                                "autofill": [Function],
+                                                                "blur": [Function],
+                                                                "change": [Function],
+                                                                "clearAsyncError": [Function],
+                                                                "clearFields": [Function],
+                                                                "clearSubmit": [Function],
+                                                                "clearSubmitErrors": [Function],
+                                                                "destroy": [Function],
+                                                                "destroyOnUnmount": true,
+                                                                "dirty": false,
+                                                                "dispatch": [Function],
+                                                                "enableReinitialize": false,
+                                                                "error": undefined,
+                                                                "focus": [Function],
+                                                                "forceUnregisterOnUnmount": false,
+                                                                "form": "TodoForm",
+                                                                "getFormState": [Function],
+                                                                "getValues": [Function],
+                                                                "initialValues": undefined,
+                                                                "initialize": [Function],
+                                                                "initialized": false,
+                                                                "invalid": false,
+                                                                "keepDirtyOnReinitialize": false,
+                                                                "onSubmit": [Function],
+                                                                "persistentSubmitErrors": false,
+                                                                "pristine": true,
+                                                                "pure": true,
+                                                                "register": [Function],
+                                                                "registerField": [Function],
+                                                                "registerInnerOnSubmit": [Function],
+                                                                "registeredFields": undefined,
+                                                                "reset": [Function],
+                                                                "resetSection": [Function],
+                                                                "sectionPrefix": undefined,
+                                                                "setSubmitFailed": [Function],
+                                                                "setSubmitSucceeded": [Function],
+                                                                "shouldAsyncValidate": [Function],
+                                                                "shouldError": [Function],
+                                                                "shouldValidate": [Function],
+                                                                "shouldWarn": [Function],
+                                                                "startAsyncValidation": [Function],
+                                                                "startSubmit": [Function],
+                                                                "stopAsyncValidation": [Function],
+                                                                "stopSubmit": [Function],
+                                                                "submit": [Function],
+                                                                "submitFailed": false,
+                                                                "submitSucceeded": false,
+                                                                "submitting": false,
+                                                                "syncErrors": Object {},
+                                                                "syncWarnings": Object {},
+                                                                "touch": [Function],
+                                                                "touchOnBlur": true,
+                                                                "touchOnChange": false,
+                                                                "triggerSubmit": undefined,
+                                                                "unregister": [Function],
+                                                                "unregisterField": [Function],
+                                                                "untouch": [Function],
+                                                                "updateSyncErrors": [Function],
+                                                                "updateSyncWarnings": [Function],
+                                                                "updateUnregisteredFields": false,
+                                                                "valid": true,
+                                                                "validExceptSubmit": true,
+                                                                "values": Object {},
+                                                                "warning": undefined,
+                                                              }
+                                                            }
+                                                            asyncValidating={false}
+                                                            component={[Function]}
+                                                            dirty={false}
+                                                            dispatch={[Function]}
+                                                            fullWidth={true}
+                                                            label="Title"
+                                                            margin="normal"
+                                                            name="title"
+                                                            normalize={[Function]}
+                                                            pristine={true}
+                                                          >
+                                                            <ReduxFormMaterialUITextField
+                                                              fullWidth={true}
+                                                              input={
+                                                                Object {
+                                                                  "name": "title",
+                                                                  "onBlur": [Function],
+                                                                  "onChange": [Function],
+                                                                  "onDragStart": [Function],
+                                                                  "onDrop": [Function],
+                                                                  "onFocus": [Function],
+                                                                  "value": "",
+                                                                }
+                                                              }
+                                                              label="Title"
+                                                              margin="normal"
+                                                              meta={
+                                                                Object {
+                                                                  "active": false,
+                                                                  "asyncValidating": false,
+                                                                  "autofilled": false,
+                                                                  "dirty": false,
+                                                                  "dispatch": [Function],
+                                                                  "error": undefined,
+                                                                  "form": "TodoForm",
+                                                                  "initial": undefined,
+                                                                  "invalid": false,
+                                                                  "pristine": true,
+                                                                  "submitFailed": false,
+                                                                  "submitting": false,
+                                                                  "touched": false,
+                                                                  "valid": true,
+                                                                  "visited": false,
+                                                                  "warning": undefined,
+                                                                }
+                                                              }
+                                                            >
+                                                              <TextField
+                                                                fullWidth={true}
+                                                                label="Title"
+                                                                margin="normal"
+                                                                name="title"
+                                                                onBlur={[Function]}
+                                                                onChange={[Function]}
+                                                                onDragStart={[Function]}
+                                                                onDrop={[Function]}
+                                                                onFocus={[Function]}
+                                                                required={false}
+                                                                select={false}
+                                                                value=""
+                                                              >
+                                                                <WithStyles(FormControl)
+                                                                  fullWidth={true}
+                                                                  margin="normal"
+                                                                  onDragStart={[Function]}
+                                                                  onDrop={[Function]}
+                                                                  required={false}
+                                                                >
+                                                                  <FormControl
+                                                                    classes={
+                                                                      Object {
+                                                                        "fullWidth": "MuiFormControl-fullWidth-4",
+                                                                        "marginDense": "MuiFormControl-marginDense-3",
+                                                                        "marginNormal": "MuiFormControl-marginNormal-2",
+                                                                        "root": "MuiFormControl-root-1",
+                                                                      }
+                                                                    }
+                                                                    component="div"
+                                                                    disabled={false}
+                                                                    error={false}
+                                                                    fullWidth={true}
+                                                                    margin="normal"
+                                                                    onDragStart={[Function]}
+                                                                    onDrop={[Function]}
+                                                                    required={false}
+                                                                  >
+                                                                    <div
+                                                                      className="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+                                                                      onDragStart={[Function]}
+                                                                      onDrop={[Function]}
+                                                                    >
+                                                                      <WithStyles(InputLabel)>
+                                                                        <InputLabel
+                                                                          classes={
+                                                                            Object {
+                                                                              "animated": "MuiInputLabel-animated-9",
+                                                                              "formControl": "MuiInputLabel-formControl-6",
+                                                                              "marginDense": "MuiInputLabel-marginDense-7",
+                                                                              "root": "MuiInputLabel-root-5",
+                                                                              "shrink": "MuiInputLabel-shrink-8",
+                                                                            }
+                                                                          }
+                                                                          disableAnimation={false}
+                                                                        >
+                                                                          <WithStyles(FormLabel)
+                                                                            className="MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+                                                                            data-shrink={false}
+                                                                          >
+                                                                            <FormLabel
+                                                                              className="MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+                                                                              classes={
+                                                                                Object {
+                                                                                  "asterisk": "MuiFormLabel-asterisk-16",
+                                                                                  "disabled": "MuiFormLabel-disabled-12",
+                                                                                  "error": "MuiFormLabel-error-13",
+                                                                                  "filled": "MuiFormLabel-filled-14",
+                                                                                  "focused": "MuiFormLabel-focused-11",
+                                                                                  "required": "MuiFormLabel-required-15",
+                                                                                  "root": "MuiFormLabel-root-10",
+                                                                                }
+                                                                              }
+                                                                              component="label"
+                                                                              data-shrink={false}
+                                                                            >
+                                                                              <label
+                                                                                className="MuiFormLabel-root-10 MuiInputLabel-root-5 MuiInputLabel-formControl-6 MuiInputLabel-animated-9"
+                                                                                data-shrink={false}
+                                                                              >
+                                                                                Title
+                                                                              </label>
+                                                                            </FormLabel>
+                                                                          </WithStyles(FormLabel)>
+                                                                        </InputLabel>
+                                                                      </WithStyles(InputLabel)>
+                                                                      <WithStyles(Input)
+                                                                        fullWidth={true}
+                                                                        name="title"
+                                                                        onBlur={[Function]}
+                                                                        onChange={[Function]}
+                                                                        onFocus={[Function]}
+                                                                        value=""
+                                                                      >
+                                                                        <Input
+                                                                          classes={
+                                                                            Object {
+                                                                              "disabled": "MuiInput-disabled-20",
+                                                                              "error": "MuiInput-error-22",
+                                                                              "focused": "MuiInput-focused-19",
+                                                                              "formControl": "MuiInput-formControl-18",
+                                                                              "fullWidth": "MuiInput-fullWidth-24",
+                                                                              "input": "MuiInput-input-25",
+                                                                              "inputMarginDense": "MuiInput-inputMarginDense-26",
+                                                                              "inputMultiline": "MuiInput-inputMultiline-27",
+                                                                              "inputType": "MuiInput-inputType-28",
+                                                                              "inputTypeSearch": "MuiInput-inputTypeSearch-29",
+                                                                              "multiline": "MuiInput-multiline-23",
+                                                                              "root": "MuiInput-root-17",
+                                                                              "underline": "MuiInput-underline-21",
+                                                                            }
+                                                                          }
+                                                                          disableUnderline={false}
+                                                                          fullWidth={true}
+                                                                          multiline={false}
+                                                                          name="title"
+                                                                          onBlur={[Function]}
+                                                                          onChange={[Function]}
+                                                                          onFocus={[Function]}
+                                                                          type="text"
+                                                                          value=""
+                                                                        >
+                                                                          <div
+                                                                            className="MuiInput-root-17 MuiInput-fullWidth-24 MuiInput-formControl-18 MuiInput-underline-21"
+                                                                          >
+                                                                            <input
+                                                                              aria-invalid={false}
+                                                                              className="MuiInput-input-25"
+                                                                              disabled={false}
+                                                                              name="title"
+                                                                              onBlur={[Function]}
+                                                                              onChange={[Function]}
+                                                                              onFocus={[Function]}
+                                                                              required={false}
+                                                                              type="text"
+                                                                              value=""
+                                                                            />
+                                                                          </div>
+                                                                        </Input>
+                                                                      </WithStyles(Input)>
+                                                                    </div>
+                                                                  </FormControl>
+                                                                </WithStyles(FormControl)>
+                                                              </TextField>
+                                                            </ReduxFormMaterialUITextField>
+                                                          </ConnectedField>
+                                                        </Connect(ConnectedField)>
+                                                      </Field>
+                                                    </TextFieldRedux>
+                                                  </div>
+                                                  <div>
+                                                    <WithStyles(Button)
+                                                      color="primary"
+                                                      fullWidth={true}
+                                                      type="submit"
+                                                      variant="contained"
+                                                    >
+                                                      <Button
+                                                        classes={
+                                                          Object {
+                                                            "colorInherit": "MuiButton-colorInherit-51",
+                                                            "contained": "MuiButton-contained-41",
+                                                            "containedPrimary": "MuiButton-containedPrimary-42",
+                                                            "containedSecondary": "MuiButton-containedSecondary-43",
+                                                            "disabled": "MuiButton-disabled-50",
+                                                            "extendedFab": "MuiButton-extendedFab-48",
+                                                            "fab": "MuiButton-fab-47",
+                                                            "flat": "MuiButton-flat-35",
+                                                            "flatPrimary": "MuiButton-flatPrimary-36",
+                                                            "flatSecondary": "MuiButton-flatSecondary-37",
+                                                            "focusVisible": "MuiButton-focusVisible-49",
+                                                            "fullWidth": "MuiButton-fullWidth-55",
+                                                            "label": "MuiButton-label-31",
+                                                            "mini": "MuiButton-mini-52",
+                                                            "outlined": "MuiButton-outlined-38",
+                                                            "outlinedPrimary": "MuiButton-outlinedPrimary-39",
+                                                            "outlinedSecondary": "MuiButton-outlinedSecondary-40",
+                                                            "raised": "MuiButton-raised-44",
+                                                            "raisedPrimary": "MuiButton-raisedPrimary-45",
+                                                            "raisedSecondary": "MuiButton-raisedSecondary-46",
+                                                            "root": "MuiButton-root-30",
+                                                            "sizeLarge": "MuiButton-sizeLarge-54",
+                                                            "sizeSmall": "MuiButton-sizeSmall-53",
+                                                            "text": "MuiButton-text-32",
+                                                            "textPrimary": "MuiButton-textPrimary-33",
+                                                            "textSecondary": "MuiButton-textSecondary-34",
+                                                          }
+                                                        }
+                                                        color="primary"
+                                                        component="button"
+                                                        disableFocusRipple={false}
+                                                        disabled={false}
+                                                        fullWidth={true}
+                                                        mini={false}
+                                                        size="medium"
+                                                        type="submit"
+                                                        variant="contained"
+                                                      >
+                                                        <WithStyles(ButtonBase)
+                                                          className="MuiButton-root-30 MuiButton-contained-41 MuiButton-containedPrimary-42 MuiButton-raised-44 MuiButton-raisedPrimary-45 MuiButton-fullWidth-55"
+                                                          component="button"
+                                                          disabled={false}
+                                                          focusRipple={true}
+                                                          focusVisibleClassName="MuiButton-focusVisible-49"
+                                                          type="submit"
+                                                        >
+                                                          <ButtonBase
+                                                            centerRipple={false}
+                                                            className="MuiButton-root-30 MuiButton-contained-41 MuiButton-containedPrimary-42 MuiButton-raised-44 MuiButton-raisedPrimary-45 MuiButton-fullWidth-55"
+                                                            classes={
+                                                              Object {
+                                                                "disabled": "MuiButtonBase-disabled-57",
+                                                                "focusVisible": "MuiButtonBase-focusVisible-58",
+                                                                "root": "MuiButtonBase-root-56",
+                                                              }
+                                                            }
+                                                            component="button"
+                                                            disableRipple={false}
+                                                            disableTouchRipple={false}
+                                                            disabled={false}
+                                                            focusRipple={true}
+                                                            focusVisibleClassName="MuiButton-focusVisible-49"
+                                                            tabIndex="0"
+                                                            type="submit"
+                                                          >
+                                                            <button
+                                                              className="MuiButtonBase-root-56 MuiButton-root-30 MuiButton-contained-41 MuiButton-containedPrimary-42 MuiButton-raised-44 MuiButton-raisedPrimary-45 MuiButton-fullWidth-55"
+                                                              disabled={false}
+                                                              onBlur={[Function]}
+                                                              onFocus={[Function]}
+                                                              onKeyDown={[Function]}
+                                                              onKeyUp={[Function]}
+                                                              onMouseDown={[Function]}
+                                                              onMouseLeave={[Function]}
+                                                              onMouseUp={[Function]}
+                                                              onTouchEnd={[Function]}
+                                                              onTouchMove={[Function]}
+                                                              onTouchStart={[Function]}
+                                                              tabIndex="0"
+                                                              type="submit"
+                                                            >
+                                                              <span
+                                                                className="MuiButton-label-31"
+                                                              >
+                                                                Add
+                                                              </span>
+                                                              <WithStyles(TouchRipple)
+                                                                center={false}
+                                                                innerRef={[Function]}
+                                                              >
+                                                                <TouchRipple
+                                                                  center={false}
+                                                                  classes={
+                                                                    Object {
+                                                                      "child": "MuiTouchRipple-child-63",
+                                                                      "childLeaving": "MuiTouchRipple-childLeaving-64",
+                                                                      "childPulsate": "MuiTouchRipple-childPulsate-65",
+                                                                      "ripple": "MuiTouchRipple-ripple-60",
+                                                                      "ripplePulsate": "MuiTouchRipple-ripplePulsate-62",
+                                                                      "rippleVisible": "MuiTouchRipple-rippleVisible-61",
+                                                                      "root": "MuiTouchRipple-root-59",
+                                                                    }
+                                                                  }
+                                                                >
+                                                                  <TransitionGroup
+                                                                    childFactory={[Function]}
+                                                                    className="MuiTouchRipple-root-59"
+                                                                    component="span"
+                                                                    enter={true}
+                                                                    exit={true}
+                                                                  >
+                                                                    <span
+                                                                      className="MuiTouchRipple-root-59"
+                                                                    />
+                                                                  </TransitionGroup>
+                                                                </TouchRipple>
+                                                              </WithStyles(TouchRipple)>
+                                                            </button>
+                                                          </ButtonBase>
+                                                        </WithStyles(ButtonBase)>
+                                                      </Button>
+                                                    </WithStyles(Button)>
+                                                  </div>
+                                                </form>
+                                              </TodosForm>
+                                            </Form(TodosForm)>
+                                          </Connect(Form(TodosForm))>
+                                        </ReduxForm>
+                                      </div>
+                                    </TodosCreate>
+                                  </Connect(TodosCreate)>
+                                  <Connect(TodosList)>
+                                    <TodosList
+                                      getTodos={[Function]}
+                                      received={true}
+                                      todos={
+                                        Array [
+                                          Object {
+                                            "id": 0,
+                                            "title": "Central Configuration Associate",
+                                          },
+                                          Object {
+                                            "id": 1,
+                                            "title": "Customer Applications Representative",
+                                          },
+                                          Object {
+                                            "id": 2,
+                                            "title": "District Communications Consultant",
+                                          },
+                                          Object {
+                                            "id": 3,
+                                            "title": "Human Accounts Facilitator",
+                                          },
+                                          Object {
+                                            "id": 4,
+                                            "title": "Regional Factors Executive",
+                                          },
+                                          Object {
+                                            "id": 5,
+                                            "title": "District Factors Representative",
+                                          },
+                                        ]
+                                      }
+                                    >
+                                      <div>
+                                        <h2>
+                                          Todo list
+                                        </h2>
+                                        <WithStyles(Table)>
+                                          <Table
+                                            classes={
+                                              Object {
+                                                "root": "MuiTable-root-66",
+                                              }
+                                            }
+                                            component="table"
+                                            padding="default"
+                                          >
+                                            <table
+                                              className="MuiTable-root-66"
+                                            >
+                                              <WithStyles(TableHead)>
+                                                <TableHead
+                                                  classes={
+                                                    Object {
+                                                      "root": "MuiTableHead-root-67",
+                                                    }
+                                                  }
+                                                  component="thead"
+                                                >
+                                                  <thead
+                                                    className="MuiTableHead-root-67"
+                                                  >
+                                                    <WithStyles(TableRow)>
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68 MuiTableRow-head-71"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <th
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-head-74"
+                                                                scope="col"
+                                                              >
+                                                                ID
+                                                              </th>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <th
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-head-74"
+                                                                scope="col"
+                                                              >
+                                                                Title
+                                                              </th>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                  </thead>
+                                                </TableHead>
+                                              </WithStyles(TableHead)>
+                                              <WithStyles(TableBody)>
+                                                <TableBody
+                                                  classes={
+                                                    Object {
+                                                      "root": "MuiTableBody-root-81",
+                                                    }
+                                                  }
+                                                  component="tbody"
+                                                >
+                                                  <tbody
+                                                    className="MuiTableBody-root-81"
+                                                  >
+                                                    <WithStyles(TableRow)
+                                                      key="0"
+                                                    >
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                0
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                Central Configuration Associate
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                    <WithStyles(TableRow)
+                                                      key="1"
+                                                    >
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                1
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                Customer Applications Representative
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                    <WithStyles(TableRow)
+                                                      key="2"
+                                                    >
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                2
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                District Communications Consultant
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                    <WithStyles(TableRow)
+                                                      key="3"
+                                                    >
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                3
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                Human Accounts Facilitator
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                    <WithStyles(TableRow)
+                                                      key="4"
+                                                    >
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                4
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                Regional Factors Executive
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                    <WithStyles(TableRow)
+                                                      key="5"
+                                                    >
+                                                      <TableRow
+                                                        classes={
+                                                          Object {
+                                                            "footer": "MuiTableRow-footer-72",
+                                                            "head": "MuiTableRow-head-71",
+                                                            "hover": "MuiTableRow-hover-70",
+                                                            "root": "MuiTableRow-root-68",
+                                                            "selected": "MuiTableRow-selected-69",
+                                                          }
+                                                        }
+                                                        component="tr"
+                                                        hover={false}
+                                                        selected={false}
+                                                      >
+                                                        <tr
+                                                          className="MuiTableRow-root-68"
+                                                        >
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                5
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                          <WithStyles(TableCell)>
+                                                            <TableCell
+                                                              classes={
+                                                                Object {
+                                                                  "body": "MuiTableCell-body-75",
+                                                                  "footer": "MuiTableCell-footer-76",
+                                                                  "head": "MuiTableCell-head-74",
+                                                                  "numeric": "MuiTableCell-numeric-77",
+                                                                  "paddingCheckbox": "MuiTableCell-paddingCheckbox-79",
+                                                                  "paddingDense": "MuiTableCell-paddingDense-78",
+                                                                  "paddingNone": "MuiTableCell-paddingNone-80",
+                                                                  "root": "MuiTableCell-root-73",
+                                                                }
+                                                              }
+                                                              numeric={false}
+                                                            >
+                                                              <td
+                                                                aria-sort={null}
+                                                                className="MuiTableCell-root-73 MuiTableCell-body-75"
+                                                              >
+                                                                District Factors Representative
+                                                              </td>
+                                                            </TableCell>
+                                                          </WithStyles(TableCell)>
+                                                        </tr>
+                                                      </TableRow>
+                                                    </WithStyles(TableRow)>
+                                                  </tbody>
+                                                </TableBody>
+                                              </WithStyles(TableBody)>
+                                            </table>
+                                          </Table>
+                                        </WithStyles(Table)>
+                                      </div>
+                                    </TodosList>
+                                  </Connect(TodosList)>
+                                </div>
+                              </Todos>
+                            </Route>
+                          </Switch>
+                        </div>
+                      </div>
+                    </TransitionMotion>
+                  </RouteTransition>
+                </AnimatedSwitch>
+              </Route>
+            </RouteWrapper>
+          </RouteTransitions>
+        </Routes>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</Wrapper>
+`;

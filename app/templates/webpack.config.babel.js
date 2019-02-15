@@ -6,7 +6,7 @@ import {
   production
 } from './src/config/webpackEnv'
 
-const envConfig = config.env == 'development' ? development : production
+const envConfig = config.env.match(/development|test/) ? development : production
 
 export default merge({}, envConfig, {
   resolve: {

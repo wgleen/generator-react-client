@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RouteTransitions /> should render correctly 1`] = `
+<Wrapper>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <Connect(ConnectedRouter)
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <ConnectedRouter
+        action="POP"
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "createHref": [Function],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+        location={
+          Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          }
+        }
+        onLocationChanged={[Function]}
+      >
+        <Router
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+        >
+          <RouteTransitions>
+            <RouteWrapper
+              atActive={
+                Object {
+                  "opacity": 1,
+                }
+              }
+              atEnter={
+                Object {
+                  "opacity": 0,
+                }
+              }
+              atLeave={
+                Object {
+                  "opacity": 0,
+                }
+              }
+              className="route-wrapper"
+            >
+              <Route>
+                <AnimatedSwitch
+                  atActive={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                  atEnter={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                  atLeave={
+                    Object {
+                      "opacity": 0,
+                    }
+                  }
+                  className="route-wrapper"
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                >
+                  <RouteTransition
+                    atActive={
+                      Object {
+                        "opacity": 1,
+                      }
+                    }
+                    atEnter={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                    atLeave={
+                      Object {
+                        "opacity": 0,
+                      }
+                    }
+                    className="route-wrapper"
+                    mapStyles={[Function]}
+                    runOnMount={false}
+                    wrapperComponent="div"
+                  >
+                    <TransitionMotion
+                      defaultStyles={null}
+                      didLeave={[Function]}
+                      styles={
+                        Array [
+                          Object {
+                            "data": <Switch
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                            />,
+                            "key": "",
+                            "style": Object {
+                              "opacity": Object {
+                                "damping": 26,
+                                "precision": 0.01,
+                                "stiffness": 170,
+                                "val": 1,
+                              },
+                            },
+                          },
+                        ]
+                      }
+                      willEnter={[Function]}
+                      willLeave={[Function]}
+                    >
+                      <div
+                        className="route-wrapper"
+                      >
+                        <div
+                          key=""
+                          style={
+                            Object {
+                              "opacity": 1,
+                            }
+                          }
+                        >
+                          <Switch
+                            key=""
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                    </TransitionMotion>
+                  </RouteTransition>
+                </AnimatedSwitch>
+              </Route>
+            </RouteWrapper>
+          </RouteTransitions>
+        </Router>
+      </ConnectedRouter>
+    </Connect(ConnectedRouter)>
+  </Provider>
+</Wrapper>
+`;

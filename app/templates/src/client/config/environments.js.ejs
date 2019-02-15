@@ -6,6 +6,10 @@ const development = {
   }
 }
 
+const test = merge({}, development, {
+
+})
+
 const production = {
   api: {
     baseURL: ''
@@ -18,6 +22,7 @@ const stage = merge({}, production, {
 
 export default {
   development,
+  test,
   production,
   stage
 }

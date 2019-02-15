@@ -2,6 +2,9 @@ export default {
   development: {
     cdnUrl: '/assets/'
   },
+  test: {
+    cdnUrl: '/assets/'
+  },
   stage: {
     cdnUrl: '<%= serverlessInfrastructure ? `https://s3.amazonaws.com/${appName}-assets-stage/assets/` : '/assets/' %>'
   },

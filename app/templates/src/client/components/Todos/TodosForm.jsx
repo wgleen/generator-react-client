@@ -2,15 +2,15 @@ import React from 'react'
 import { reduxForm } from 'redux-form'
 import TextFieldRedux from '../Fields/TextFieldRedux'
 import Button from '@material-ui/core/Button'
-import styles from './todoForm.scss'
+import styles from './todosForm.scss'
 
-let TodoForm = props => {
+let TodosForm = props => {
   const { handleSubmit } = props
 
   return (
     <form 
       onSubmit={handleSubmit}
-      className={styles.todoForm}
+      className={styles.todosForm}
     >
       <div>
         <TextFieldRedux
@@ -35,8 +35,8 @@ let TodoForm = props => {
   )
 }
 
-TodoForm = reduxForm({
+TodosForm = reduxForm({
   form: 'TodoForm'
-})(TodoForm)
+})(TodosForm)
 
-export default TodoForm
+export default TodosForm

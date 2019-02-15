@@ -11,7 +11,7 @@ app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-if (config.env == 'development') {
+if (config.env.match(/development|test/)) {
   const webpack = require('webpack')
   const webpackDevMiddleware = require('webpack-dev-middleware')
   const webpackHotMiddleware = require('webpack-hot-middleware')
