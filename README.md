@@ -45,7 +45,7 @@ NODE_ENV=production ENV=production|stage npm run build
 ```
 
 #### Testing
-##### Using jest with enzyme and chai (see examples on /components)
+##### Using jest with enzyme and chai (see examples on `./src/client/components`)
 ```bash
 npm test
 ```
