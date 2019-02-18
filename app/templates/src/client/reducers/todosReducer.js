@@ -5,26 +5,20 @@ import {
   RECEIVE_TODOS
 } from '../constants/actionTypes'
 import { merge } from 'lodash'
-import {
-  todoMock,
-  todosMock
-} from '../mocks/todosMock'
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   todo: {
     fetching: false,
     received: false,
     content: {
       id: '',
       title: ''
-    },
-    //...todoMock
+    }
   },
   todos: {
     fetching: false,
     received: false,
-    content: [],
-    //...todosMock
+    content: []
   }
 }
 
