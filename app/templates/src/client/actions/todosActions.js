@@ -7,29 +7,34 @@ import {
   getTodosResource
 } from '../lib/api'
 
-const fetchTodos = (value = true) => ({
+export const fetchTodos = (value = true) => ({
   type: FETCH_TODOS,
   payload: value
 })
 
-const receiveTodos = values => ({
+export const receiveTodos = values => ({
   type: RECEIVE_TODOS,
   payload: values
 })
 
-export const createAndGetTodos = values => {
-  return dispatch => {
-    createTodosResource(values)
-      .then(res => dispatch(getTodos()))
-  }
-}
-
-export const getTodos = values => {
+export const getTodos = () => {
   return dispatch => {
     dispatch(fetchTodos())
 
-    getTodosResource()
-      .then(res => dispatch(receiveTodos(res.data)))
-      .catch(err => dispatch(fetchTodos(false)))
+    return new Promise((resolve, reject) =>
+      getTodosResource()
+        .then(res => resolve(dispatch(receiveTodos(res.data))))
+        .catch(err => reject(dispatch(fetchTodos(false))))
+    )
+  }
+}
+
+export const createAndGetTodos = values => {
+  return dispatch => {
+    return new Promise((resolve, reject) => 
+      createTodosResource(values)
+        .then(res => resolve(dispatch(getTodos())))
+        .catch(err => reject(err))
+    )
   }
 }
