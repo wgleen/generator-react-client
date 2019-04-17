@@ -47,10 +47,15 @@ module.exports = class extends Generator {
       let templatePath = '/'
 
       //Root files
-
+      
       this.fs.copy(
         this.templatePath('.babelrc'),
         this.destinationPath(`${destinationPath}/.babelrc`)
+      )
+
+      this.fs.copy(
+        this.templatePath('.editorconfig'),
+        this.destinationPath(`${destinationPath}/.editorconfig`)
       )
 
       this.fs.copy(

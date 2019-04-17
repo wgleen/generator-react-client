@@ -1,0 +1,9 @@
+root = true
+
+[*]
+charset = utf-8
+
+[*.{js, jsx, scss, css, json}]
+indent_style = tab
+indent_size = tab
+tab_width = 2
