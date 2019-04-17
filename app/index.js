@@ -173,6 +173,11 @@ module.exports = class extends Generator {
         this.destinationPath(`${destinationPath}/todosActions.js`)
       )
 
+      this.fs.copy(
+        this.templatePath(`${templatePath}/todosActions.spec.js`),
+        this.destinationPath(`${destinationPath}/todosActions.spec.js`)
+      )
+
       //Components files
 
       templatePath = 'src/client/components'
