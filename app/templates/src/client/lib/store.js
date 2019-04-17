@@ -13,12 +13,14 @@ import history from './history'
 
 const middlewares = applyMiddleware(
   routerMiddleware(history),
-  thunk, 
-  multi, 
+  thunk,
+  multi,
   promise
 )
 
-export const store = createStore(
+const store = createStore(
   connectRouter(history)(rootReducer),
-  compose(process.env.ENV == 'development' ? composeWithDevTools(middlewares) : middlewares)
+  compose(process.env.ENV === 'development' ? composeWithDevTools(middlewares) : middlewares)
 )
+
+export default store

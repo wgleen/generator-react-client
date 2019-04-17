@@ -17,17 +17,17 @@ describe('TodosReducer', () => {
 
   describe('FETCH_TODO', () => {
     it('should return todo store with :received equal to false', () => {
-      let action = { type: FETCH_TODO }
+      const action = { type: FETCH_TODO }
 
       expect(
         todosReducer(undefined, action)
           .todo.received
-        ).toBeFalsy()
+      ).toBeFalsy()
     })
 
     describe('when action payload equal to false', () => {
       it('should return todo store with :fetching equal to false', () => {
-        let action = {
+        const action = {
           type: FETCH_TODO,
           payload: false
         }
@@ -40,7 +40,7 @@ describe('TodosReducer', () => {
 
     describe('when action payload equal to true', () => {
       it('should return todo store with :fetching equal to true', () => {
-        let action = {
+        const action = {
           type: FETCH_TODO,
           payload: true
         }
@@ -54,7 +54,7 @@ describe('TodosReducer', () => {
 
   describe('RECEIVE_TODO', () => {
     it('should return todo store with :fetching equal to false', () => {
-      let action = { type: RECEIVE_TODO }
+      const action = { type: RECEIVE_TODO }
 
       expect(
         todosReducer(undefined, action).todo.fetching
@@ -62,7 +62,7 @@ describe('TodosReducer', () => {
     })
 
     it('should return todo store with :received equal to true', () => {
-      let action = { type: RECEIVE_TODO }
+      const action = { type: RECEIVE_TODO }
 
       expect(
         todosReducer(undefined, action).todo.received
@@ -70,7 +70,7 @@ describe('TodosReducer', () => {
     })
 
     it('should return todo store with :content with todo', () => {
-      let action = { 
+      const action = {
         type: RECEIVE_TODO,
         payload: todoMock
       }
@@ -83,17 +83,17 @@ describe('TodosReducer', () => {
 
   describe('FETCH_TODOS', () => {
     it('should return todo store with :received equal to false', () => {
-      let action = { type: FETCH_TODOS }
+      const action = { type: FETCH_TODOS }
 
       expect(
         todosReducer(undefined, action)
           .todo.received
-        ).toBeFalsy()
+      ).toBeFalsy()
     })
 
     describe('when action payload equal to false', () => {
       it('should return todo store with :fetching equal to false', () => {
-        let action = {
+        const action = {
           type: FETCH_TODOS,
           payload: false
         }
@@ -106,7 +106,7 @@ describe('TodosReducer', () => {
 
     describe('when action payload equal to true', () => {
       it('should return todo store with :fetching equal to true', () => {
-        let action = {
+        const action = {
           type: FETCH_TODOS,
           payload: true
         }
@@ -120,7 +120,7 @@ describe('TodosReducer', () => {
 
   describe('RECEIVE_TODOS', () => {
     it('should return todo store with :fetching equal to false', () => {
-      let action = { type: RECEIVE_TODOS }
+      const action = { type: RECEIVE_TODOS }
 
       expect(
         todosReducer(undefined, action).todos.fetching
@@ -128,7 +128,7 @@ describe('TodosReducer', () => {
     })
 
     it('should return todo store with :received equal to true', () => {
-      let action = { type: RECEIVE_TODOS }
+      const action = { type: RECEIVE_TODOS }
 
       expect(
         todosReducer(undefined, action).todos.received
@@ -136,7 +136,7 @@ describe('TodosReducer', () => {
     })
 
     it('should return todo store with :content with todo list', () => {
-      let action = { 
+      const action = {
         type: RECEIVE_TODOS,
         payload: todosMock
       }

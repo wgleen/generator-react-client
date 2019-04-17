@@ -5,14 +5,14 @@ import App from './App'
 
 describe('<App />', () => {
   it('should render correctly', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <App />
       </Wrapper>
     )
 
     expect(component).toMatchSnapshot()
-    
+
     component.unmount()
   })
 })

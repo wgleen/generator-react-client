@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 import { spy } from 'sinon'
 import { reduxForm } from 'redux-form'
 import Wrapper from '../Wrapper/Wrapper'
-import TextFieldRedux from '../Fields/TextFieldRedux'
+import TextFieldRedux from './TextFieldRedux'
 
 describe('<TextFieldRedux />', () => {
   it('should render correctly', () => {
@@ -12,18 +12,18 @@ describe('<TextFieldRedux />', () => {
       form: 'TodoForm'
     })(() => (
       <form onSubmit={onSubmit}>
-        <TextFieldRedux name='test'/>
+        <TextFieldRedux name='test' />
       </form>
     ))
 
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <FakeForm />
       </Wrapper>
     )
 
     expect(component).toMatchSnapshot()
-    
+
     component.unmount()
   })
 })

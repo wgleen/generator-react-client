@@ -3,7 +3,7 @@ import { name } from 'faker'
 
 export const todoMock = {
   id: 1,
-  title: name.title(),
+  title: name.title()
 }
 
 export const todosMock = times(6, i => ({

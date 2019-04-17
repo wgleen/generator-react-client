@@ -6,7 +6,7 @@ import Todos from './Todos'
 
 describe('<Todos />', () => {
   it('should render correctly', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <Todos />
       </Wrapper>
@@ -18,7 +18,7 @@ describe('<Todos />', () => {
   })
 
   it("should create a new todo and add to todos's list", () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <Todos />
       </Wrapper>
@@ -33,7 +33,7 @@ describe('<Todos />', () => {
         target: {
           value: text
         }
-    })
+      })
 
     component
       .find('Button')
@@ -44,8 +44,8 @@ describe('<Todos />', () => {
 
     const newTodo = list
       .find('TableBody')
-        .find('TableRow')
-        .last()
+      .find('TableRow')
+      .last()
 
     expect(newTodo.find('TableCell').at(1).text()).toEqual(text)
 

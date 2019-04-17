@@ -9,16 +9,15 @@ if (cluster.isMaster) {
 
   const numCPUs = os.cpus().length
 
-  for (let i = 0; i < numCPUs; i++)
+  for (let i = 0; i < numCPUs; i += 1) cluster.fork()
+
+  cluster.on('exit', (worker) => {
+    logger.info(`worker ${worker.process.pid} died`)
+
     cluster.fork()
-
-    cluster.on('exit', (worker, code, signal) => {
-      logger.info(`worker ${worker.process.pid} died`)
-
-      cluster.fork()
-    })
+  })
 } else {
-  app.listen(config.port, err => {
+  app.listen(config.port, (err) => {
     if (err) logger.error(err)
 
     logger.info(`Express server listening on port 3000 as Worker ${cluster.worker.id} running @ process ${cluster.worker.process.pid}!`)

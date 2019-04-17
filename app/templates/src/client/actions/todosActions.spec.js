@@ -1,16 +1,16 @@
-import { store } from '../lib/store'
+import { name } from 'faker'
+import store from '../lib/store'
 import {
   FETCH_TODOS,
   RECEIVE_TODOS
 } from '../constants/actionTypes'
-import { 
+import {
   fetchTodos,
   receiveTodos,
   getTodos,
   createAndGetTodos
 } from './todosActions'
 import { todosMock } from '../mocks/todosMock'
-import { name } from 'faker'
 
 describe('todosActions', () => {
   describe('fetchTodos', () => {

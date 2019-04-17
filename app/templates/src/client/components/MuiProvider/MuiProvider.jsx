@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   MuiThemeProvider,
   createMuiTheme
@@ -8,7 +9,7 @@ const theme = createMuiTheme({
 
 })
 
-const MuiProvider = props => {
+const MuiProvider = (props) => {
   const { children } = props
 
   return (
@@ -16,6 +17,18 @@ const MuiProvider = props => {
       {children}
     </MuiThemeProvider>
   )
+}
+
+MuiProvider.defaultProps = {
+  children: null
+}
+
+MuiProvider.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.node,
+    PropTypes.string
+  ])
 }
 
 export default MuiProvider

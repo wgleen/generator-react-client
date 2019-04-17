@@ -4,16 +4,14 @@ import routePaths from '../../constants/routes'
 import RouteTransitions from '../RouteTransitions/RouteTransitions'
 import Todos from '../Todos/Todos'
 
-const Routes = props => {
-  return (
-    <RouteTransitions>
-      <Route
-        exact
-        path={routePaths.root.path}
-        component={Todos}
-      />
-    </RouteTransitions>
-  )
-}
+const Routes = () => (
+  <RouteTransitions>
+    <Route
+      exact
+      path={routePaths.root.path}
+      component={Todos}
+    />
+  </RouteTransitions>
+)
 
 export default Routes

@@ -1,14 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { reduxForm } from 'redux-form'
-import TextFieldRedux from '../Fields/TextFieldRedux'
 import Button from '@material-ui/core/Button'
+import TextFieldRedux from '../Fields/TextFieldRedux'
 import styles from './todosForm.scss'
 
-let TodosForm = props => {
+const TodosForm = (props) => {
   const { handleSubmit } = props
 
   return (
-    <form 
+    <form
       onSubmit={handleSubmit}
       className={styles.todosForm}
     >
@@ -17,16 +18,16 @@ let TodosForm = props => {
           name='title'
           label='Title'
           margin='normal'
-          fullWidth={true}
+          fullWidth
         />
       </div>
 
       <div>
         <Button
-          variant='contained' 
+          variant='contained'
           color='primary'
           type='submit'
-          fullWidth={true}
+          fullWidth
         >
           Add
         </Button>
@@ -35,8 +36,10 @@ let TodosForm = props => {
   )
 }
 
-TodosForm = reduxForm({
+TodosForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+}
+
+export default reduxForm({
   form: 'TodoForm'
 })(TodosForm)
-
-export default TodosForm

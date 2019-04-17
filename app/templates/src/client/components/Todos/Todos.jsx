@@ -2,7 +2,7 @@ import React from 'react'
 import TodosList from './TodosList'
 import TodosCreate from './TodosCreate'
 
-const Todos = props => (
+const Todos = () => (
   <div>
     <TodosCreate />
 

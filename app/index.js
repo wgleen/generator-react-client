@@ -147,6 +147,11 @@ module.exports = class extends Generator {
       templatePath = 'src/client'
       destinationPath = `${rootPath}/src/client`
 
+      this.fs.copy(
+        this.templatePath(`${templatePath}/container.js`),
+        this.destinationPath(`${destinationPath}/container.js`)
+      )
+
       this.fs.copyTpl(
         this.templatePath(`${templatePath}/index.html.ejs`),
         this.destinationPath(`${destinationPath}/index.html`),

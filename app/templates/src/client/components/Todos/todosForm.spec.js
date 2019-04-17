@@ -6,7 +6,7 @@ import TodosForm from './TodosForm'
 
 describe('<TodosForm />', () => {
   it('should render correctly', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosForm />
       </Wrapper>
@@ -18,7 +18,7 @@ describe('<TodosForm />', () => {
   })
 
   it('should contain an input :title name', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosForm />
       </Wrapper>
@@ -34,7 +34,7 @@ describe('<TodosForm />', () => {
   })
 
   it('should contain a button submit', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosForm />
       </Wrapper>
@@ -52,18 +52,18 @@ describe('<TodosForm />', () => {
   it('should call function onSubmit form', () => {
     const onSubmit = sinon.spy()
 
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosForm onSubmit={onSubmit} />
       </Wrapper>
     )
 
-    let button = component.find('Button').first()
+    const button = component.find('Button').first()
 
     button.simulate('submit')
 
     expect(onSubmit.callCount).toEqual(1)
-    
+
     component.unmount()
   })
 })

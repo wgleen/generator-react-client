@@ -5,14 +5,14 @@ import DefaultLayout from './DefaultLayout'
 
 describe('<DefaultLayout />', () => {
   it('should render correctly', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <DefaultLayout />
       </Wrapper>
     )
 
     expect(component).toMatchSnapshot()
-    
+
     component.unmount()
   })
 })

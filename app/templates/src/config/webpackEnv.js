@@ -122,7 +122,7 @@ export const production = {
     ]
   },
   optimization: {
-    minimizer: [ 
+    minimizer: [
       new UglifyJsPlugin({
         sourceMap: true,
         uglifyOptions: {
@@ -142,7 +142,7 @@ export const production = {
       DEBUG: false
     }),
     new HtmlWebpackPlugin({
-      template:  `${config.paths.client}/index.html`,
+      template: `${config.paths.client}/index.html`,
       filename: 'index.html'
     }),
     new webpack.LoaderOptionsPlugin({

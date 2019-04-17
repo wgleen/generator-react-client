@@ -1,12 +1,12 @@
 import React from 'react'
 import { mount } from 'enzyme'
+import { random } from 'lodash'
 import Wrapper from '../Wrapper/Wrapper'
 import TodosList from './TodosList'
-import { random } from 'lodash'
 
 describe('<TodosList />', () => {
   it('should render correctly', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosList />
       </Wrapper>
@@ -18,7 +18,7 @@ describe('<TodosList />', () => {
   })
 
   it('should contain a h2 tag with "Todo list" text', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosList />
       </Wrapper>
@@ -34,7 +34,7 @@ describe('<TodosList />', () => {
   })
 
   it('should contain a Table with TableCells with "ID" and "Title" texts', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosList />
       </Wrapper>
@@ -49,7 +49,7 @@ describe('<TodosList />', () => {
   })
 
   it('should have a list of todos into TableRows', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <TodosList />
       </Wrapper>
@@ -61,9 +61,9 @@ describe('<TodosList />', () => {
     const item = list[index]
     const row = component
       .find('TableBody')
-        .find('TableRow').at(index)
+      .find('TableRow').at(index)
     const cell = row.find('TableCell')
-    
+
     expect(cell.at(0).text()).toEqual(String(item.id))
     expect(cell.at(1).text()).toEqual(item.title)
 

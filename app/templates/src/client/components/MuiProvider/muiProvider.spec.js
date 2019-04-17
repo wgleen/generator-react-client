@@ -5,14 +5,14 @@ import MuiProvider from './MuiProvider'
 
 describe('<MuiProvider />', () => {
   it('should render correctly', () => {
-    let component = mount(
+    const component = mount(
       <Wrapper>
         <MuiProvider><div /></MuiProvider>
       </Wrapper>
     )
 
     expect(component).toMatchSnapshot()
-    
+
     component.unmount()
   })
 })

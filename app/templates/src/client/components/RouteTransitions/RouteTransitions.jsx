@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { AnimatedSwitch } from 'react-router-transition'
 import './routeTransitions.scss'
 
-const RouteTransitions = props => {
+const RouteTransitions = (props) => {
   const { children } = props
 
   return (
@@ -15,6 +16,18 @@ const RouteTransitions = props => {
       {children}
     </AnimatedSwitch>
   )
+}
+
+RouteTransitions.defaultProps = {
+  children: null
+}
+
+RouteTransitions.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.node,
+    PropTypes.string
+  ])
 }
 
 export default RouteTransitions

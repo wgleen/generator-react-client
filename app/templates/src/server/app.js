@@ -1,9 +1,11 @@
+/* eslint-disable global-require */
 import express from 'express'
 import helmet from 'helmet'
 import bodyParser from 'body-parser'
-import config from './config'
 import morgan from 'morgan'
+import config from './config'
 import logger from './lib/logger'
+
 const app = express()
 
 app.use(morgan('tiny'))
@@ -46,7 +48,7 @@ if (config.env.match(/development|test/)) {
     } catch (err) {
       logger.error(err)
     }
-    
+
     res.end()
   })
 } else {

@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { getTodos } from '../../actions/todosActions'
+import PropTypes from 'prop-types'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { getTodos as getTodosAction } from '../../actions/todosActions'
 
 class TodosList extends Component {
-  componentWillMount () {
+  componentWillMount() {
     const {
       getTodos
     } = this.props
@@ -17,7 +18,7 @@ class TodosList extends Component {
     getTodos()
   }
 
-  render () {
+  render() {
     const {
       todos
     } = this.props
@@ -49,7 +50,7 @@ class TodosList extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const _state = state.todosReducer.todos
 
   return {
@@ -58,7 +59,15 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getTodos }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ getTodos: getTodosAction }, dispatch)
+
+TodosList.defaultProps = {
+  todos: []
+}
+
+TodosList.propTypes = {
+  getTodos: PropTypes.func.isRequired,
+  todos: PropTypes.arrayOf(PropTypes.object)
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodosList)

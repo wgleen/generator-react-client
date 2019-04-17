@@ -1,10 +1,10 @@
+import { merge } from 'lodash'
 import {
   FETCH_TODO,
   RECEIVE_TODO,
   FETCH_TODOS,
   RECEIVE_TODOS
 } from '../constants/actionTypes'
-import { merge } from 'lodash'
 
 export const INITIAL_STATE = {
   todo: {
@@ -24,7 +24,7 @@ export const INITIAL_STATE = {
 
 let newState
 
-export default (state=INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FETCH_TODO:
       newState = merge({}, state, {

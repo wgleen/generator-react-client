@@ -5,7 +5,6 @@ const development = {
 }
 
 const test = merge({}, development, {
-  
 })
 
 const production = {
@@ -13,7 +12,6 @@ const production = {
 }
 
 const stage = merge({}, production, {
-  
 })
 
 export default {
