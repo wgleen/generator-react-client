@@ -53,6 +53,11 @@ module.exports = class extends Generator {
         this.destinationPath(`${destinationPath}/.babelrc`)
       )
 
+      this.fs.copy(
+        this.templatePath('.eslintrc.js'),
+        this.destinationPath(`${destinationPath}/.eslintrc.js`)
+      )
+
       this.fs.copyTpl(
         this.templatePath('jest.config.json.ejs'),
         this.destinationPath(`${destinationPath}/jest.config.json`),
