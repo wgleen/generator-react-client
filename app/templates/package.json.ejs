@@ -10,6 +10,7 @@
     "postinstall": "if [ $NPM_CONFIG_PRODUCTION ]; then npm run build; fi",
     "dev": "nodemon src/server/server.js --exec babel-node",
     "test": "NODE_ENV=development ENV=test jest --config jest.config.json -u --passWithNoTests",
+    "lint": "eslint src/**/*.{js,jsx}",
     "build": "npm run build:clean && npm run build:client && npm run build:server",
     "build:destroy": "rm -rf dist",
     "build:clean": "npm run build:destroy && mkdir dist",
