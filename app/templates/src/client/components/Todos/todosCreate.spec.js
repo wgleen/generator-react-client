@@ -1,28 +1,51 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { createAndGetTodos as createAndGetTodosAction } from '../../actions/todosActions'
-import TodosForm from './TodosForm'
+import { mount } from 'enzyme'
+import Wrapper from '../Wrapper/Wrapper'
+import TodosCreate from './TodosCreate'
 
-const TodosCreate = (props) => {
-  const { createAndGetTodos } = props
+describe('<TodosCreate />', () => {
+  it('should render correctly', () => {
+    const component = mount(
+      <Wrapper>
+        <TodosCreate />
+      </Wrapper>
+    )
 
-  return (
-    <div>
-      <h2>Add Todo</h2>
+    expect(component).toMatchSnapshot()
 
-      <TodosForm onSubmit={createAndGetTodos} />
-    </div>
-  )
-}
+    component.unmount()
+  })
 
-TodosCreate.propTypes = {
-  createAndGetTodos: PropTypes.func.isRequired
-}
+  it('should contain a h2 tag with "Add Todo" text', () => {
+    const component = mount(
+      <Wrapper>
+        <TodosCreate />
+      </Wrapper>
+    )
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  createAndGetTodos: createAndGetTodosAction
-}, dispatch)
+    expect(
+      component
+        .find('h2')
+        .text()
+    ).toEqual('Add Todo')
 
-export default connect(null, mapDispatchToProps)(TodosCreate)
+    component.unmount()
+  })
+
+  it('should contain a TodosForm component with onSubmit function', () => {
+    const component = mount(
+      <Wrapper>
+        <TodosCreate />
+      </Wrapper>
+    )
+
+    chaiExpect(
+      component
+        .find('TodosForm')
+        .props()
+        .onSubmit
+    ).to.be.a('function')
+
+    component.unmount()
+  })
+})
