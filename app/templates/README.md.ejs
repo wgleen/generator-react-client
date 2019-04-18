@@ -1,4 +1,22 @@
 ## <%= appName %>
+
+<% if (gitlab) { %>
+#### Builds Status
+---
+#### Master (Prodution):
+[![pipeline status](<%= gitlabRepo %>/badges/master/pipeline.svg)](<%= gitlabRepo %>/commits/master)
+
+#### Development (Webmotors Homolog):
+[![pipeline status](<%= gitlabRepo %>/badges/development/pipeline.svg)](<%= gitlabRepo %>/commits/development)
+
+#### Test Coverage
+---
+#### Master (Prodution):
+[![coverage report](<%= gitlabRepo %>/badges/master/coverage.svg)](<%= gitlabRepo %>/commits/master)
+
+#### Development (Webmotors Homolog):
+[![coverage report](<%= gitlabRepo %>/badges/development/coverage.svg)](<%= gitlabRepo %>/commits/development)
+<% } %>
 ### Documentation
 ---
 #### Requirements
@@ -31,6 +49,7 @@ NODE_ENV=production ENV=production|stage npm run build
 ##### Using jest with enzyme and chai (see examples on `./src/client/**/*.spec.js`)
 ```bash
 npm test
+npm run test:coverage
 ```
 
 #### Deploy to AWS production|stage (with Serverless)

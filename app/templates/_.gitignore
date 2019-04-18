@@ -24,5 +24,6 @@ dist
 # Serverless
 .serverless
 
-# Jest snapshots
+# Jest
 __snapshots__/
+coverage/

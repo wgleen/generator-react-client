@@ -33,6 +33,17 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'herokuInfrastructure',
         message: 'The infrastructure of the stage is heroku? (y|n)'
+      },
+      {
+        type: 'input',
+        name: 'gitlab',
+        message: 'Gitlab resources? (y|n)'
+      },
+      {
+        when: answers => answers.gitlab == 'y',
+        type: 'input',
+        name: 'gitlabGroupOrUser',
+        message: 'Gitlab group or user?'
       }
     ])
     .then(answers => {
@@ -42,6 +53,9 @@ module.exports = class extends Generator {
       const serverlessInfrastructure = answers.serverlessInfrastructure == 'y'
       const serverlessRegion = answers.serverlessRegion
       const herokuInfrastructure = answers.herokuInfrastructure == 'y'
+      const gitlab = answers.gitlab == 'y'
+      const gitlabGroupOrUser = answers.gitlabGroupOrUser
+      const gitlabRepo = `https://gitlab.com/${gitlabGroupOrUser}/${_appName}`
 
       let destinationPath = rootPath
       let templatePath = '/'
@@ -62,6 +76,13 @@ module.exports = class extends Generator {
         this.templatePath('.eslintrc.js'),
         this.destinationPath(`${destinationPath}/.eslintrc.js`)
       )
+
+      if (gitlab)
+        this.fs.copyTpl(
+          this.templatePath('.gitlab-ci.yml.ejs'),
+          this.destinationPath(`${destinationPath}/.gitlab-ci.yml`),
+          { appName: _appName }
+        )
 
       this.fs.copyTpl(
         this.templatePath('jest.config.json.ejs'),
@@ -97,7 +118,11 @@ module.exports = class extends Generator {
       this.fs.copyTpl(
         this.templatePath('README.md.ejs'),
         this.destinationPath(`${destinationPath}/README.md`),
-        { appName: appTitle }
+        { 
+          appName: appTitle,
+          gitlab,
+          gitlabRepo
+        }
       )
 
       if (herokuInfrastructure)
@@ -141,6 +166,11 @@ module.exports = class extends Generator {
       //Test files
       templatePath = 'test'
       destinationPath = `${rootPath}/test`
+
+      this.fs.copy(
+        this.templatePath(`${templatePath}/fileTransformer.js`),
+        this.destinationPath(`${destinationPath}/fileTransformer.js`)
+      )
 
       this.fs.copy(
         this.templatePath(`${templatePath}/helpers.js`),

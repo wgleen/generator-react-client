@@ -1,0 +1,38 @@
+image: node:latest
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+before_script:
+  - npm install
+
+lint:
+  stage: test
+  script:
+    - npm run lint
+  allow_failure: true
+
+tests:
+  stage: test
+  script:
+    - npm run test:coverage
+    
+hml:
+  stage: deploy
+  image: ruby:latest
+  variables:
+    HEROKU_API_KEY: $HEROKU_HML_API_KEY
+  before_script:
+    - echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+    - wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
+    - apt-get update
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - apt-get install -y heroku-toolbelt
+    - gem install dpl
+  script:
+    - dpl --provider=heroku --app=<%= appName %> --api-key=$HEROKU_API_KEY
+  only:
+    - hml

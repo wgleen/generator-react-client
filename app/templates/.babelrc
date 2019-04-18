@@ -3,6 +3,12 @@
     "@babel/preset-env",
     "@babel/preset-react"
   ],
+  "plugins": ["@babel/plugin-proposal-class-properties"],
   "sourceMaps": true,
-  "retainLines": true
+  "retainLines": true,
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
 }
