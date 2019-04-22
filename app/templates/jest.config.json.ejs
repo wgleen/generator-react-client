@@ -8,14 +8,14 @@
   ],
   "setupFiles": ["./test/helpers.js"],
   "moduleNameMapper": {
-    "\\.(css|scss)$": "identity-obj-proxy"
+    "\\.(css|scss)$": "identity-obj-proxy",
+    "\\.(svg|png)$": "<rootDir>/test/fileTransformer.js"
   },
   "globals": {
     "NODE_ENV": "test"
   },
   "transform": {
-    "^.+\\.jsx?$": "babel-jest",
-    "\\.(svg|png)$": "<rootDir>/test/fileTransformer.js"
+    "^.+\\.jsx?$": "babel-jest"
   },
   "collectCoverageFrom": [
     "src/**/*.{js,jsx}"
